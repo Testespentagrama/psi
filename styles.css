@@ -1,0 +1,2265 @@
+picture{display:contents}
+
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:#27312c;background:#fff}
+:root{--escuro:#183627;--medio:#496763;--texto:#27312c;--creme:#f3f1e8}
+.abertura{position:fixed;inset:0;z-index:1000;background:#26351d;overflow:hidden}.abertura video{position:absolute;inset:0;width:100%;height:100%;object-fit:fill}.logo-abertura{position:absolute;left:.4%;top:.84%;width:21.75%}.entrar{position:absolute;right:4.1%;bottom:8%;border:0;background:transparent;color:#e7dfc3;display:flex;gap:8px;align-items:center;cursor:pointer}.entrar span{font:12.2px Arial,sans-serif;letter-spacing:.31em}.entrar i{width:18px;height:18px;border-radius:50%;display:grid;place-items:center;background:#d8d0a7;color:#46553b;font:normal 18px Arial}.oculto{display:none}
+
+.site{--W:min(100vw,1920px);position:relative}
+.cabecalho{position:absolute;z-index:50;top:0;left:0;width:100%;height:116px;padding:0 2.1%;display:flex;align-items:center;background:transparent;transition:background .2s,box-shadow .2s}
+.cabecalho.fixo{position:fixed;background:rgba(242,241,229,.96);box-shadow:0 1px 5px rgba(0,0,0,.06);backdrop-filter:blur(8px)}
+.logo-site{width:337px;height:auto}.cabecalho nav{margin-left:auto;display:flex;gap:38px;border-bottom:1px solid rgba(24,54,39,.35);padding:0 6px 8px}.cabecalho nav a{font:17px Arial,sans-serif;color:var(--escuro);text-decoration:none;white-space:nowrap}.btn{display:inline-block;background:var(--medio);color:#fff;text-decoration:none;border-radius:22px;padding:11px 17px;font:700 15px Arial,sans-serif}.topo-btn{margin-left:34px;padding:12px 22px;font-size:16px}
+
+.hero{position:relative;width:100%;aspect-ratio:1366/768;max-height:900px;overflow:hidden}.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}.hero-copy{position:absolute;z-index:2;left:3.05%;top:29.5%;color:var(--escuro)}
+.hero h1{margin:0;font-family:"Playfair Display",Georgia,serif;font-size:clamp(39px,3.1vw,60px);line-height:1.08;font-weight:400;color:var(--medio);text-shadow:.5px .5px rgba(73,103,99,.18)}
+.traco{display:block;width:57px;height:2px;background:var(--medio);margin:42px 0 31px}.hero-copy p{margin:0 0 37px;font:clamp(16px,1.18vw,23px)/1.62 Arial,sans-serif;color:var(--escuro)}.hero-copy .btn{margin-bottom:14px}.hero-copy strong{display:block;font:700 clamp(14px,1.05vw,20px) Arial,sans-serif;color:var(--medio)}
+
+.ponte{text-align:center;background:#fff;padding:39px 20px 29px}.ponte h2{margin:0 0 10px;font:400 clamp(25px,2.05vw,39px)/1.1 "Playfair Display",Georgia,serif;color:var(--medio)}.ponte p{margin:0;font:clamp(15px,1.2vw,22px) Arial,sans-serif;color:#27312c}
+
+.painel{margin:0 0 175px;background:#f2f0e7;padding:47px 4.6% 62px;min-height:575px}
+.sinais{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(73,103,99,.55);border-bottom:1px solid rgba(73,103,99,.55);padding:24px 0}
+.sinais>div{min-height:93px;display:flex;align-items:center;gap:20px;padding:0 26px;border-right:1px solid rgba(73,103,99,.20)}.sinais>div:last-child{border-right:0}.sinais p{margin:0;font:clamp(14px,1.15vw,21px)/1.35 Arial,sans-serif;color:var(--medio)}
+.icone{position:relative;flex:0 0 44px;width:44px;height:44px;border-radius:50%;background:var(--medio);overflow:hidden}.icone:before{content:"";position:absolute;width:25px;height:32px;left:-2px;top:6px;background:#eee8cc;border-radius:0 18px 18px 0}.icone:after{content:"";position:absolute;left:22px;top:0;width:2px;height:44px;background:#eee8cc}
+
+.conteudo-duplo{display:grid;grid-template-columns:minmax(0,1fr) 240px minmax(0,1fr);gap:48px;padding:55px 5.2% 0}.conteudo-duplo article h3{margin:0 0 29px;font:700 clamp(16px,1.28vw,24px)/1.55 Arial,sans-serif;color:var(--medio)}.conteudo-duplo article p{max-width:600px;margin:0 0 28px;font:clamp(15px,1.18vw,22px)/1.65 Arial,sans-serif;color:var(--texto);text-align:justify}.link-seta{font:clamp(14px,1.12vw,21px) Arial,sans-serif;color:var(--escuro);text-decoration:none}.link-seta i{display:inline-grid;place-items:center;width:49px;height:30px;border-radius:18px;background:var(--medio);color:#fff;font-style:normal;font-size:24px;margin-left:10px}.grafico{align-self:center;width:100%}.grafico svg{display:block;width:100%;height:auto}
+
+@media(max-width:1000px){.cabecalho{height:90px}.logo-site{width:245px}.cabecalho nav{display:none}.topo-btn{margin-left:auto}.hero{aspect-ratio:auto;height:720px}.hero-copy{left:5%;top:25%}.sinais{grid-template-columns:1fr 1fr}.conteudo-duplo{grid-template-columns:1fr}.grafico{width:210px;margin:auto}}
+
+/* V12 — ajuste de fidelidade da primeira parte em zoom 100% */
+@media (min-width:1001px){
+  .cabecalho{height:96px;padding:0 2.1%;}
+  .logo-site{width:236px;}
+  .cabecalho nav{gap:32px;padding-bottom:7px;}
+  .cabecalho nav a{font-size:15px;}
+  .topo-btn{margin-left:30px;padding:10px 20px;font-size:14px;}
+
+  .hero{aspect-ratio:1366/768;max-height:none;}
+  .hero-copy{left:3.05%;top:30.5%;}
+  .hero h1{font-size:clamp(36px,2.75vw,53px);line-height:1.08;}
+  .traco{width:52px;margin:34px 0 25px;}
+  .hero-copy p{font-size:clamp(15px,1.05vw,20px);line-height:1.55;margin-bottom:30px;}
+  .hero-copy .btn{margin-bottom:0;}
+  .hero-copy strong{margin-top:10px;margin-left:0;font-size:clamp(13px,.92vw,18px);line-height:1.2;}
+
+  .ponte{padding:30px 20px 25px;}
+  .ponte h2{font-size:clamp(24px,1.8vw,35px);margin-bottom:8px;}
+  .ponte p{font-size:clamp(14px,1.05vw,20px);}
+}
+
+/* V14 — segunda parte reconstruída com os elementos gráficos aprovados */
+.painel{position:relative;overflow:hidden;padding:32px 5.5% 58px;min-height:0;margin-bottom:150px;background:#f2f0e7}
+.sinais{max-width:1540px;margin:0 auto;grid-template-columns:repeat(4,minmax(0,1fr));padding:17px 0;border-color:rgba(73,103,99,.52)}
+.sinais>div{min-height:64px;gap:15px;padding:0 24px;border-right:1px solid rgba(73,103,99,.18)}
+.sinais>div:first-child{padding-left:8px}.sinais>div:last-child{padding-right:8px}
+.sinais p{font:15px/1.32 Arial,sans-serif;color:#496763}
+/* meia-esfera derivada do símbolo do logo: menor e discreta */
+.icone{flex:0 0 31px;width:31px;height:31px;border-radius:50%;background:#496763;overflow:hidden}
+.icone:before{width:18px;height:23px;left:-1px;top:4px;background:#eee8cc;border-radius:0 14px 14px 0}
+.icone:after{left:15px;top:0;width:1.5px;height:31px;background:#eee8cc}
+.icone i{position:absolute;z-index:2;left:0;top:15px;width:17px;height:1.5px;background:#eee8cc}
+.conteudo-duplo{max-width:1380px;margin:0 auto;grid-template-columns:minmax(0,1fr) 180px minmax(0,1fr);gap:62px;padding:38px 30px 8px}
+.conteudo-duplo article h3{font:700 15px/1.48 Arial,sans-serif;letter-spacing:.01em;margin:0 0 22px;color:#496763}
+.conteudo-duplo article p{max-width:510px;font:14px/1.62 Arial,sans-serif;margin:0 0 20px;text-align:justify;color:#27312c}
+.link-seta{font:14px Arial,sans-serif}.link-seta i{width:36px;height:24px;font-size:19px;margin-left:9px}
+.grafico{width:150px;align-self:center;justify-self:center;opacity:.92}.grafico svg{width:100%;height:auto}
+.quina-organica{position:absolute;left:-10px;bottom:-12px;width:190px;height:auto;pointer-events:none;opacity:.72}
+@media(max-width:1200px){.sinais p{font-size:13px}.sinais>div{padding:0 15px}.conteudo-duplo{gap:35px;grid-template-columns:minmax(0,1fr) 145px minmax(0,1fr)}}
+@media(max-width:1000px){.painel{padding:28px 5% 55px}.sinais{grid-template-columns:1fr 1fr}.sinais>div{border-bottom:1px solid rgba(73,103,99,.14)}.conteudo-duplo{grid-template-columns:1fr;padding:36px 4% 10px}.grafico{width:125px;margin:0 auto}.quina-organica{width:145px;opacity:.55}}
+/* V15 — uso literal dos elementos aprovados */
+.painel{margin-bottom:0;overflow:hidden}
+.icone{display:none!important}
+.icone-img{display:block;flex:0 0 25px;width:25px;height:34px;object-fit:contain;object-position:center}
+.grafico{width:132px;opacity:.82}
+.grafico img{display:block;width:100%;height:auto;object-fit:contain}
+.faixa-inferior{position:relative;height:150px;background:#fff;overflow:hidden}
+.faixa-inferior .quina-organica{position:absolute;left:-10px;top:12px;bottom:auto;width:190px;height:auto;opacity:.72;pointer-events:none}
+@media(max-width:1000px){.icone-img{width:22px;height:30px;flex-basis:22px}.grafico{width:115px}.faixa-inferior{height:120px}.faixa-inferior .quina-organica{width:145px}}
+
+/* V16 — refinamentos de proporção e alinhamento */
+.icone-img{flex-basis:31.25px;width:31.25px;height:42.5px}
+.sinais>div:nth-child(2) p{white-space:nowrap}
+.grafico{width:172px}
+.conteudo-duplo article{display:flex;flex-direction:column;align-self:stretch}
+.conteudo-duplo article .link-seta{margin-top:auto;align-self:flex-start}
+@media(max-width:1200px){.sinais>div:nth-child(2) p{white-space:normal}}
+@media(max-width:1000px){.icone-img{width:27.5px;height:37.5px;flex-basis:27.5px}.grafico{width:150px}}
+
+/* V17 — responsividade real: desktop preservado + tablet/celular */
+.menu-toggle{display:none;background:transparent;border:0;padding:8px;cursor:pointer}
+.menu-toggle span{display:block;width:24px;height:2px;margin:5px 0;background:var(--escuro)}
+
+@media (max-width: 700px){
+  body{overflow-x:hidden}
+
+  /* Abertura: mantém o vídeo como peça visual, sem deformá-lo */
+  .abertura{background:#26351d}
+  .abertura video{object-fit:cover;object-position:center center}
+  .logo-abertura{left:5%;top:5%;width:48%;max-width:220px}
+  .entrar{right:6%;bottom:5.5%}
+  .entrar span{font-size:11px}
+
+  /* Cabeçalho móvel fixo e discreto */
+  .cabecalho,.cabecalho.fixo{position:fixed;top:0;height:72px;padding:0 18px;background:rgba(242,241,229,.97);box-shadow:0 1px 4px rgba(0,0,0,.05);backdrop-filter:blur(8px)}
+  .logo-site{width:154px}
+  .topo-btn{display:none}
+  .menu-toggle{display:block;margin-left:auto;z-index:3}
+  .cabecalho nav{display:none;position:absolute;left:0;right:0;top:72px;margin:0;padding:18px 22px 22px;border:0;background:rgba(242,241,229,.985);box-shadow:0 8px 14px rgba(0,0,0,.07);flex-direction:column;gap:0}
+  .cabecalho nav.aberto{display:flex}
+  .cabecalho nav a{font-size:15px;padding:11px 2px;border-bottom:1px solid rgba(73,103,99,.13)}
+
+  /* Hero: no celular não reduzimos o desktop; recompomos em duas áreas */
+  .hero{height:auto;min-height:0;padding-top:72px;display:flex;flex-direction:column;overflow:hidden;background:#eeebcf}
+  .hero-img{position:relative;order:2;width:100%;height:330px;object-fit:cover;object-position:67% 72%}
+  .hero-copy{position:relative;order:1;left:auto;top:auto;width:100%;padding:42px 25px 32px;background:linear-gradient(90deg,#f1efd7 0%,#e9e5c7 100%)}
+  .hero h1{font-size:35px;line-height:1.08}
+  .traco{width:43px;margin:25px 0 21px}
+  .hero-copy p{font-size:16px;line-height:1.52;margin-bottom:24px}
+  .hero-copy p br{display:none}
+  .hero-copy .btn{font-size:13px;padding:10px 14px}
+  .hero-copy strong{font-size:13px;margin-top:9px}
+
+  /* Ponte */
+  .ponte{padding:31px 22px 25px}
+  .ponte h2{font-size:26px;line-height:1.12;margin-bottom:10px}
+  .ponte p{font-size:15px;line-height:1.45}
+
+  /* Segunda parte */
+  .painel{padding:18px 22px 42px;background:#f2f0e7}
+  .sinais{display:grid;grid-template-columns:1fr;padding:0;border-top:1px solid rgba(73,103,99,.48);border-bottom:1px solid rgba(73,103,99,.48)}
+  .sinais>div,.sinais>div:first-child,.sinais>div:last-child{min-height:0;padding:17px 4px;gap:15px;border-right:0;border-bottom:1px solid rgba(73,103,99,.16)}
+  .sinais>div:last-child{border-bottom:0}
+  .sinais p,.sinais>div:nth-child(2) p{font-size:15px;line-height:1.38;white-space:normal}
+  .sinais p br{display:none}
+  .icone-img{width:31px;height:42px;flex-basis:31px}
+
+  .conteudo-duplo{display:flex;flex-direction:column;gap:0;padding:34px 4px 2px}
+  .conteudo-duplo article{display:block}
+  .conteudo-duplo article h3{font-size:16px;line-height:1.48;margin-bottom:18px}
+  .conteudo-duplo article h3 br{display:none}
+  .conteudo-duplo article p{max-width:none;font-size:15px;line-height:1.58;text-align:left;margin-bottom:18px}
+  .link-seta{display:inline-flex;align-items:center;font-size:14px;margin-bottom:0}
+  .link-seta i{flex:0 0 auto}
+  .grafico{order:2;width:145px;margin:28px auto;opacity:.82}
+  .conteudo-duplo article:first-child{order:1}
+  .conteudo-duplo article:last-child{order:3}
+  .conteudo-duplo article:last-child{padding-top:2px}
+
+  .faixa-inferior{height:105px}
+  .faixa-inferior .quina-organica{left:-22px;top:10px;width:135px;opacity:.65}
+}
+
+@media (min-width:701px) and (max-width:1000px){
+  .cabecalho nav{display:none}
+  .menu-toggle{display:block;margin-left:auto}
+  .topo-btn{margin-left:16px}
+  .hero{padding-top:90px}
+}
+
+/* V20 — acabamento específico para smartphones: leitura, respiros e CTAs */
+@media (max-width:600px){
+  .painel{padding-left:18px;padding-right:18px;padding-bottom:38px}
+
+  /* Cada sinal passa a ter uma coluna fixa para o símbolo e outra para o texto. */
+  .sinais>div,.sinais>div:first-child,.sinais>div:last-child{
+    display:grid;
+    grid-template-columns:34px minmax(0,1fr);
+    column-gap:16px;
+    align-items:center;
+    padding:16px 8px;
+  }
+  .icone-img{
+    width:32px;
+    height:43px;
+    max-width:32px;
+    min-width:32px;
+    object-fit:contain;
+    justify-self:start;
+  }
+  .sinais p,.sinais>div:nth-child(2) p{
+    min-width:0;
+    width:100%;
+    margin:0;
+    font-size:14px;
+    line-height:1.42;
+    letter-spacing:0;
+    word-spacing:normal;
+    white-space:normal;
+    word-break:normal;
+    overflow-wrap:normal;
+    text-align:left;
+  }
+
+  /* Conteúdo principal com largura real de celular e sem compressão lateral. */
+  .conteudo-duplo{padding:32px 8px 4px;min-width:0}
+  .conteudo-duplo article{width:100%;min-width:0}
+  .conteudo-duplo article h3{font-size:15px;line-height:1.48;margin-bottom:17px}
+  .conteudo-duplo article p{width:100%;min-width:0;font-size:14px;line-height:1.58;margin-bottom:20px}
+
+  /* CTA: texto e seta são duas peças inseparáveis; a seta nunca encolhe nem é cortada. */
+  .link-seta{
+    display:inline-grid;
+    grid-template-columns:auto 38px;
+    column-gap:10px;
+    align-items:center;
+    width:max-content;
+    max-width:100%;
+    padding-right:2px;
+    font-size:13.5px;
+    line-height:1.25;
+    white-space:nowrap;
+    overflow:visible;
+  }
+  .link-seta i{
+    display:grid;
+    place-items:center;
+    width:38px;
+    min-width:38px;
+    height:25px;
+    margin-left:0;
+    padding:0 0 2px;
+    border-radius:15px;
+    font-size:19px;
+    line-height:1;
+    overflow:visible;
+  }
+
+  .grafico{width:155px;margin:27px auto 30px}
+  .conteudo-duplo article:last-child{padding-top:0}
+  .faixa-inferior{height:90px}
+}
+
+@media (max-width:390px){
+  .painel{padding-left:15px;padding-right:15px}
+  .sinais>div,.sinais>div:first-child,.sinais>div:last-child{grid-template-columns:31px minmax(0,1fr);column-gap:13px;padding-left:5px;padding-right:5px}
+  .icone-img{width:29px;min-width:29px;height:40px}
+  .sinais p,.sinais>div:nth-child(2) p{font-size:13.5px}
+  .conteudo-duplo{padding-left:5px;padding-right:5px}
+  .link-seta{font-size:13px;grid-template-columns:auto 36px;column-gap:8px}
+  .link-seta i{width:36px;min-width:36px;height:24px}
+}
+
+
+/* V23 — HERO SMARTPHONE LIMPO
+   Regra única para telefones. Não altera desktop/tablet.
+   Ajusta somente a composição mobile, sem zoom global. */
+@media (max-width:600px){
+  .hero{
+    position:relative;
+    display:block;
+    height:338px;
+    min-height:0;
+    padding-top:72px;
+    overflow:hidden;
+    background:#eeebcf;
+  }
+  .hero-img{
+    position:absolute;
+    z-index:0;
+    inset:72px 0 auto 0;
+    width:100%;
+    height:266px;
+    object-fit:cover;
+    object-position:60% center;
+  }
+  .hero:after{
+    content:"";
+    position:absolute;
+    z-index:1;
+    left:0;
+    top:72px;
+    width:72%;
+    height:266px;
+    pointer-events:none;
+    background:linear-gradient(90deg,rgba(241,239,215,.98) 0%,rgba(241,239,215,.93) 54%,rgba(241,239,215,.60) 76%,rgba(241,239,215,0) 100%);
+  }
+  .hero-copy{
+    position:relative;
+    z-index:2;
+    left:auto;
+    top:auto;
+    width:68%;
+    max-width:270px;
+    padding:22px 0 0 27px;
+    background:transparent;
+  }
+  /* SOMENTE a chamada principal fica menor no smartphone. */
+  .hero h1{
+    font-size:22px;
+    line-height:1.06;
+  }
+  .traco{width:36px;margin:11px 0 10px}
+  .hero-copy p{
+    width:100%;
+    max-width:225px;
+    margin:0 0 10px;
+    font-size:11px;
+    line-height:1.34;
+    white-space:normal;
+    word-break:normal;
+    overflow-wrap:normal;
+  }
+  .hero-copy p br{display:none}
+  .hero-copy .btn{font-size:10.5px;padding:7px 11px;margin-bottom:0;white-space:nowrap}
+  .hero-copy strong{font-size:10.5px;line-height:1.2;margin-top:8px;white-space:nowrap}
+
+  /* A próxima seção encosta diretamente no fim real do hero. */
+  .ponte{margin-top:0}
+}
+
+@media (max-width:390px){
+  .hero{height:330px}
+  .hero-img,.hero:after{height:258px}
+  .hero-img{object-position:59% center}
+  .hero-copy{width:69%;max-width:250px;padding:20px 0 0 24px}
+  .hero h1{font-size:21px}
+  .hero-copy p{max-width:210px;font-size:10.7px}
+  .hero-copy .btn{font-size:10.2px}
+  .hero-copy strong{font-size:10.2px}
+}
+
+
+/* V27/V28 — vídeo único de abertura: o navegador escolhe a fonte certa
+   via <source media>, então não há mais duas classes/dois vídeos para alternar.
+   Mantido apenas o ajuste visual de enquadramento para telas estreitas/tablet retrato. */
+@media (max-width: 1100px) and (orientation: portrait) {
+  .abertura video{object-fit:cover;object-position:center center}
+}
+
+/* V29 — terceira seção: Entrelinhas. V28 preservada acima sem alterações. */
+.entrelinhas{
+  position:relative;
+  width:100%;
+  aspect-ratio:1366/541;
+  min-height:520px;
+  overflow:hidden;
+  background:#f5f3ed;
+}
+.entrelinhas-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:0}
+.entrelinhas-copy{position:absolute;z-index:2;left:7.05%;top:10.5%;width:34.8%;color:#27312c}
+.entrelinhas-copy h2{
+  margin:0 0 34px;
+  font-family:Aileron,Arial,sans-serif;
+  font-size:13.7px;
+  line-height:1.72;
+  font-weight:700;
+  letter-spacing:.36px;
+  color:#496763;
+  text-shadow:0 1px 2px rgba(73,103,99,.16);
+}
+.entrelinhas-texto{max-width:470px}
+.entrelinhas-texto p{
+  margin:0 0 16px;
+  font-family:Aileron,Arial,sans-serif;
+  font-size:12.7px;
+  line-height:1.7;
+  font-weight:400;
+  color:#27312c;
+  text-align:justify;
+}
+.entrelinhas-frase{
+  position:absolute;z-index:3;left:53.05%;top:40.4%;margin:0;
+  font-family:"Bebas Neue","Arial Narrow",Arial,sans-serif;
+  font-size:12px;line-height:1.38;font-weight:400;letter-spacing:.78px;
+  color:#d9d9d9;text-shadow:0 1px 2px rgba(0,0,0,.28);
+}
+.entrelinhas-quina{position:absolute;z-index:2;left:-4px;bottom:-4px;width:210px;height:auto;opacity:.72;pointer-events:none}
+
+@media (min-width:1001px){
+  .entrelinhas{min-height:0}
+}
+@media (min-width:701px) and (max-width:1000px){
+  .entrelinhas{aspect-ratio:auto;height:620px}
+  .entrelinhas-bg{object-position:55% center}
+  .entrelinhas-copy{left:6%;top:10%;width:40%}
+  .entrelinhas-frase{left:52%;top:41%}
+}
+@media (max-width:700px){
+  .entrelinhas{aspect-ratio:auto;min-height:0;height:auto;padding:0;background:#f5f3ed;display:flex;flex-direction:column}
+  .entrelinhas-bg{position:relative;order:2;width:100%;height:auto;aspect-ratio:1366/541;object-fit:cover;object-position:63% center}
+  .entrelinhas-copy{position:relative;order:1;left:auto;top:auto;width:100%;padding:36px 28px 30px;background:#f5f3ed}
+  .entrelinhas-copy h2{font-size:14px;line-height:1.55;letter-spacing:.3px;margin-bottom:25px}
+  .entrelinhas-copy h2 br{display:none}
+  .entrelinhas-texto{max-width:none}
+  .entrelinhas-texto p{font-size:13px;line-height:1.58;text-align:left;margin-bottom:14px}
+  .entrelinhas-frase{left:10%;top:auto;bottom:12%;font-size:10px;letter-spacing:.7px}
+  .entrelinhas-quina{width:120px;left:-8px;bottom:-5px}
+}
+
+/* V30 — ajuste cirúrgico desktop: transição + alinhamento da seção Entrelinhas.
+   Não altera os breakpoints já aprovados para tablet/smartphone. */
+@media (min-width:1001px){
+  /* reduz o vazio entre a segunda e a terceira seção e mantém a quina ancorada na transição */
+  .faixa-inferior{height:96px}
+  .faixa-inferior .quina-organica{left:-10px;top:-38px;width:190px;opacity:.72}
+
+  /* aproxima a composição textual da referência sem redimensionar a fotografia */
+  .entrelinhas-copy{left:7.05%;top:3.8%;width:34.8%}
+  .entrelinhas-copy h2{margin-bottom:28px}
+
+  /* chamada sobre a imagem: discretamente mais baixa e mais à esquerda */
+  .entrelinhas-frase{left:51.8%;top:43.5%}
+}
+
+/* V31 — correção fiel à referência da seção Entrelinhas (desktop apenas). */
+@media (min-width:1001px){
+  /* Transição curta: a quina liga visualmente a seção anterior à próxima. */
+  .faixa-inferior{height:58px}
+  .faixa-inferior .quina-organica{left:-10px;top:-76px;width:190px;opacity:.72}
+
+  /* Título e corpo pertencem ao mesmo quadro da seção. */
+  .entrelinhas-copy{left:7.05%;top:7.8%;width:34.8%}
+  .entrelinhas-copy h2{font-size:13.7px;line-height:1.72;margin-bottom:27px}
+
+  /* Corpo igual à escala visual do texto já aprovado na seção anterior. */
+  .entrelinhas-texto p{font-size:15px;line-height:1.72;margin-bottom:16px;text-align:justify}
+
+  /* Frase sobre a fotografia conforme referência. */
+  .entrelinhas-frase{left:52.6%;top:41.5%;font-size:12px;letter-spacing:.78px}
+}
+
+/* V32 — ajuste cirúrgico conforme referência Canva: transição e escala tipográfica. */
+@media (min-width:1001px){
+  /* A faixa branca pertence somente à transição entre as páginas. */
+  .faixa-inferior{height:150px;background:#fff}
+  .faixa-inferior .quina-organica{left:-10px;top:12px;width:190px;opacity:.72}
+
+  /* Remove da imagem o branco que estava embutido no arquivo original. */
+  .entrelinhas-bg{content:url("assets/secao-entrelinhas-bg-crop.webp");object-fit:cover;object-position:center center}
+
+  /* A seção começa diretamente no quadro bege, como no projeto de referência. */
+  .entrelinhas-copy{left:7.05%;top:4.8%;width:35.8%}
+
+  /* Segundo título na mesma escala visual do primeiro título da seção anterior. */
+  .entrelinhas-copy h2{font-size:15px;line-height:1.48;margin-bottom:27px}
+
+  /* Corpo na mesma escala do texto “Um espaço de escuta...” já aprovado. */
+  .entrelinhas-texto{max-width:510px}
+  .entrelinhas-texto p{font-size:14px;line-height:1.62;margin-bottom:16px;text-align:justify}
+
+  .entrelinhas-frase{left:52.6%;top:41.5%;font-size:12px;letter-spacing:.78px}
+}
+
+/* V33 — ajuste exclusivo para smartphones da seção Entrelinhas.
+   Desktop/tablet permanecem integralmente preservados. */
+@media (max-width:600px){
+  .entrelinhas-bg{
+    width:100%;
+    height:190px;
+    aspect-ratio:auto;
+    object-fit:cover;
+    object-position:center 54%;
+    display:block;
+  }
+  .entrelinhas-frase{
+    left:9%;
+    right:auto;
+    top:auto;
+    bottom:48px;
+    width:auto;
+    max-width:150px;
+    margin:0;
+    color:#d9d9d9;
+    font-size:10px;
+    line-height:1.28;
+    letter-spacing:.78px;
+    z-index:3;
+  }
+  /* No celular a quina não disputa a fotografia nem a frase. */
+  .entrelinhas-quina{display:none}
+}
+
+/* V34 — nova seção "A psicanálise pode fazer sentido". Seções anteriores preservadas. */
+.sentido{
+  position:relative;
+  width:100%;
+  aspect-ratio:1366/541;
+  min-height:520px;
+  overflow:hidden;
+  background:#f5f3ed;
+}
+.sentido-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:0}
+.sentido-copy{position:absolute;z-index:2;left:49%;top:8%;width:44%;color:#27312c}
+.sentido-copy h2{
+  margin:0 0 27px;
+  font-family:Aileron,Arial,sans-serif;
+  font-size:15px;
+  line-height:1.48;
+  font-weight:700;
+  letter-spacing:.36px;
+  color:#496763;
+  text-shadow:0 1px 2px rgba(73,103,99,.16);
+}
+.sentido-copy ul{margin:0;padding-left:18px;max-width:610px}
+.sentido-copy li{
+  margin:0 0 14px;
+  padding-left:2px;
+  font-family:Aileron,Arial,sans-serif;
+  font-size:14px;
+  line-height:1.62;
+  font-weight:400;
+  color:#27312c;
+}
+.sentido-quina{position:absolute;z-index:1;right:-32px;bottom:-22px;width:190px;height:auto;opacity:.25;pointer-events:none}
+
+@media (min-width:1001px){.sentido{min-height:0}}
+@media (min-width:701px) and (max-width:1000px){
+  .sentido{aspect-ratio:auto;height:620px}
+  .sentido-bg{object-position:center center}
+  .sentido-copy{left:47%;top:8%;width:48%}
+  .sentido-copy h2{font-size:14px}
+  .sentido-copy li{font-size:13px;margin-bottom:12px}
+}
+@media (max-width:700px){
+  .sentido{aspect-ratio:auto;min-height:0;height:auto;display:flex;flex-direction:column;background:#f5f3ed}
+  .sentido-bg{position:relative;order:1;width:100%;height:270px;object-fit:cover;object-position:25% center}
+  .sentido-copy{position:relative;order:2;left:auto;top:auto;width:100%;padding:32px 28px 38px;background:#f5f3ed}
+  .sentido-copy h2{font-size:14px;line-height:1.55;letter-spacing:.3px;margin-bottom:24px}
+  .sentido-copy ul{max-width:none;padding-left:17px}
+  .sentido-copy li{font-size:13px;line-height:1.58;margin-bottom:13px;padding-left:1px}
+  .sentido-quina{display:none}
+}
+
+/* V35 — ajuste cirúrgico da seção "sentido": respiro superior + dois ornamentos da referência. */
+.sentido-ornamento{position:absolute;z-index:1;height:auto;pointer-events:none;opacity:.28}
+.sentido-ornamento-esq{left:-20px;bottom:-28px;width:205px}
+.sentido-ornamento-dir{right:-16px;bottom:-10px;width:145px}
+@media (min-width:1001px){
+  .sentido{margin-top:54px}
+}
+@media (min-width:701px) and (max-width:1000px){
+  .sentido{margin-top:42px}
+  .sentido-ornamento-esq{width:170px;left:-22px;bottom:-24px}
+  .sentido-ornamento-dir{width:125px;right:-14px;bottom:-8px}
+}
+@media (max-width:700px){
+  .sentido-ornamento{display:none}
+}
+
+/* V36 — correção cirúrgica dos ornamentos da seção sentido.
+   Apenas UMA linha orgânica na quina esquerda; desktop anterior preservado. */
+.sentido-ornamento-esq{
+  left:-8px;
+  bottom:-18px;
+  width:175px;
+  opacity:.48;
+}
+.sentido-ornamento-dir{opacity:.28}
+@media (min-width:701px) and (max-width:1000px){
+  .sentido-ornamento-esq{width:145px;left:-10px;bottom:-16px;opacity:.45}
+}
+
+
+/* V38 — único ornamento da seção sentido: emaranhado no canto inferior direito. */
+.sentido-emaranhado-direito{
+  position:absolute;
+  z-index:2;
+  right:-2px;
+  bottom:8px;
+  width:150px;
+  height:auto;
+  pointer-events:none;
+}
+@media (min-width:701px) and (max-width:1000px){
+  .sentido-emaranhado-direito{width:125px;right:-2px;bottom:6px}
+}
+@media (max-width:700px){
+  .sentido-emaranhado-direito{display:none}
+}
+
+/* V39 — ajuste EXCLUSIVO para smartphones da seção sentido.
+   Desktop e tablet permanecem integralmente preservados. */
+@media (max-width:700px){
+  .sentido{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    height:auto;
+    min-height:0;
+    margin-top:0;
+    overflow:hidden;
+    background:#f5f3ed;
+  }
+  .sentido-bg{
+    position:relative;
+    inset:auto;
+    order:1;
+    display:block;
+    width:100%;
+    height:auto;
+    aspect-ratio:597/541;
+    object-fit:cover;
+    object-position:center center;
+    margin:0;
+  }
+  .sentido-copy{
+    position:relative;
+    order:2;
+    left:auto;
+    top:auto;
+    width:100%;
+    box-sizing:border-box;
+    margin:0;
+    padding:30px 28px 48px;
+    background:#f5f3ed;
+  }
+  .sentido-emaranhado-direito{
+    display:block;
+    z-index:3;
+    right:-7px;
+    bottom:8px;
+    width:92px;
+    opacity:.58;
+  }
+}
+
+/* V40 — smartphone: repetir a lógica da seção anterior.
+   Respiro branco -> conteúdo -> imagem. Desktop/tablet intocados. */
+@media (max-width:700px){
+  .sentido{
+    margin-top:58px;
+    background:#f5f3ed;
+  }
+  .sentido-copy{
+    order:1;
+    padding:30px 28px 48px;
+  }
+  .sentido-bg{
+    order:2;
+    margin:0;
+  }
+  .sentido-emaranhado-direito{
+    /* mantém o emaranhado no canto inferior direito do bloco de texto,
+       e não sobre a fotografia que agora fecha a seção */
+    bottom:calc((100vw * 541 / 597) + 8px);
+  }
+}
+
+/* V42 — seção Perguntas: composição integral sobre a fotografia, conforme referência. */
+.perguntas-porta{
+  position:relative;
+  width:100%;
+  aspect-ratio:947/423;
+  overflow:hidden;
+  background-image:url("assets/secao-perguntas-bg.webp");
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+.perguntas-copy{
+  position:absolute;
+  z-index:2;
+  left:2.95%;
+  top:23.8%;
+  color:#e0dabd;
+}
+.perguntas-copy h2{
+  margin:0;
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:20.5px;
+  line-height:1.08;
+  font-weight:400;
+  color:#e0dabd;
+  text-shadow:.7px .7px 0 rgba(224,218,189,.30);
+}
+.perguntas-copy>p{
+  margin:28px 0 0;
+  font-family:Aileron,Arial,sans-serif;
+  font-size:12.7px;
+  line-height:1.55;
+  font-weight:400;
+  color:#d9d9d9;
+}
+.perguntas-link{
+  position:absolute;
+  left:0;
+  top:257px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  white-space:nowrap;
+  font-family:Garet,Arial,sans-serif;
+  font-size:11px;
+  line-height:1;
+  font-weight:600;
+  color:#e0dabd;
+  text-decoration:none;
+}
+.perguntas-link i{
+  display:grid;
+  place-items:center;
+  width:29px;
+  height:19px;
+  border:1px solid rgba(224,218,189,.9);
+  border-radius:12px;
+  font:normal 17px/1 Arial,sans-serif;
+  color:#e0dabd;
+}
+.perguntas-frase{
+  position:absolute;
+  z-index:2;
+  left:59.3%;
+  top:74.7%;
+  margin:0;
+  font-family:"Bebas Neue","Arial Narrow",Arial,sans-serif;
+  font-size:12px;
+  line-height:1.18;
+  letter-spacing:.078em;
+  font-weight:400;
+  color:#d9d9d9;
+  opacity:.60;
+}
+@media (min-width:701px) and (max-width:1000px){
+  .perguntas-copy{left:2.95%;top:22%}
+  .perguntas-copy h2{font-size:18px}
+  .perguntas-copy>p{font-size:11.5px;margin-top:22px}
+  .perguntas-link{top:220px;font-size:10.5px}
+  .perguntas-frase{font-size:10px;left:59.3%;top:74%}
+}
+@media (max-width:700px){
+  .perguntas-porta{
+    aspect-ratio:auto;
+    min-height:620px;
+    background-size:auto 100%;
+    background-position:center center;
+  }
+  .perguntas-copy{left:7.5%;top:12%}
+  .perguntas-copy h2{font-size:20.5px}
+  .perguntas-copy>p{font-size:12.7px;margin-top:26px}
+  .perguntas-link{top:300px;font-size:11px}
+  .perguntas-frase{left:auto;right:7%;top:auto;bottom:8%;font-size:11px}
+}
+
+/* V43 — respiro de transição antes da seção da porta.
+   Espaço externo: não altera enquadramento nem posicionamento interno da V42. */
+.perguntas-porta{
+  margin-top:84px;
+}
+@media (min-width:701px) and (max-width:1000px){
+  .perguntas-porta{margin-top:68px;}
+}
+@media (max-width:700px){
+  .perguntas-porta{margin-top:58px;}
+}
+
+/* V51 — reconstrução limpa do mobile da seção Perguntas.
+   Regra: recortar a fotografia à direita no acabamento anterior à porta;
+   ampliar o painel esquerdo para leitura confortável; preservar a posição
+   do bloco principal; levar a frase secundária para baixo do CTA. */
+@media (max-width:600px){
+  .perguntas-porta{
+    width:100%;
+    aspect-ratio:360/425;
+    min-height:0;
+    margin-top:58px;
+    overflow:hidden;
+    background-size:auto 100%;
+    background-position:left center;
+    background-repeat:no-repeat;
+  }
+  .perguntas-copy{
+    left:4.2%;
+    top:16.5%;
+    width:78%;
+  }
+  .perguntas-copy h2{
+    margin:0;
+    max-width:285px;
+    font-size:20.5px;
+    line-height:1.08;
+  }
+  .perguntas-copy>p{
+    margin-top:26px;
+    max-width:260px;
+    font-size:12.7px;
+    line-height:1.55;
+  }
+  .perguntas-link{
+    left:0;
+    top:220px;
+    font-size:11px;
+    gap:10px;
+  }
+  .perguntas-link i{
+    width:29px;
+    height:19px;
+    font-size:17px;
+  }
+  .perguntas-frase{
+    left:11.5%;
+    right:auto;
+    top:auto;
+    bottom:8.5%;
+    max-width:210px;
+    font-size:12px;
+    line-height:1.18;
+    letter-spacing:.078em;
+    text-align:left;
+  }
+}
+@media (max-width:375px){
+  .perguntas-porta{aspect-ratio:360/425;}
+  .perguntas-copy{left:4.2%;top:16.5%;width:80%;}
+  .perguntas-copy h2{font-size:19.5px;max-width:275px;}
+  .perguntas-copy>p{font-size:12.2px;max-width:250px;margin-top:25px;}
+  .perguntas-link{top:216px;font-size:10.7px;}
+  .perguntas-frase{left:11.5%;bottom:8%;font-size:11.2px;max-width:200px;}
+}
+
+/* V52 — ajuste cirúrgico solicitado no mobile.
+   1) reduz o respiro branco superior;
+   2) amplia discretamente a fotografia mantendo a ancoragem à esquerda,
+      para o corte terminar antes do acabamento claro junto à porta;
+   3) sobe a frase secundária para não encostar na borda inferior.
+   Desktop e tablet permanecem intactos. */
+@media (max-width:600px){
+  .perguntas-porta{
+    margin-top:28px;
+    background-size:auto 108%;
+    background-position:left center;
+  }
+  .perguntas-frase{
+    bottom:12%;
+  }
+}
+@media (max-width:375px){
+  .perguntas-porta{
+    margin-top:28px;
+    background-size:auto 108%;
+    background-position:left center;
+  }
+  .perguntas-frase{
+    bottom:11.5%;
+  }
+}
+
+/* V53 — mobile aprovado pela referência marcada pelo usuário.
+   Mantém os textos nas posições definidas, quebra o título em 3 linhas,
+   amplia o enquadramento e encerra o recorte à direita antes do acabamento. */
+@media (max-width:600px){
+  .perguntas-porta{
+    margin-top:28px;
+    aspect-ratio:645/507;
+    min-height:0;
+    background-size:auto 100%;
+    /* desloca a foto para que a borda direita termine antes do acabamento */
+    background-position:left center;
+  }
+  .perguntas-copy{
+    left:4.2%;
+    top:6.5%;
+    width:47%;
+  }
+  .perguntas-copy h2{
+    max-width:190px;
+    font-size:20.5px;
+    line-height:1.32;
+  }
+  .perguntas-copy>p{
+    max-width:190px;
+    margin-top:25px;
+    font-size:12.7px;
+    line-height:1.55;
+  }
+  .perguntas-link{
+    top:242px;
+    font-size:11px;
+  }
+  .perguntas-frase{
+    left:15%;
+    right:auto;
+    bottom:5.5%;
+    max-width:175px;
+    font-size:12px;
+  }
+}
+@media (max-width:375px){
+  .perguntas-porta{
+    margin-top:28px;
+    aspect-ratio:645/507;
+    background-size:auto 100%;
+    background-position:left center;
+  }
+  .perguntas-copy{left:4.2%;top:6.5%;width:47%;}
+  .perguntas-copy h2{font-size:19.5px;line-height:1.32;max-width:180px;}
+  .perguntas-copy>p{font-size:12.2px;max-width:185px;margin-top:24px;}
+  .perguntas-link{top:232px;font-size:10.7px;}
+  .perguntas-frase{left:15%;bottom:5.5%;font-size:11.2px;max-width:165px;}
+}
+
+/* V54 — ajuste único no enquadramento mobile da seção da porta.
+   Amplia a fotografia sem mover textos nem alterar o desktop; mantém a
+   ancoragem à esquerda para retirar mais conteúdo da lateral direita. */
+@media (max-width:600px){
+  .perguntas-porta{
+    background-size:auto 116%;
+    background-position:left center;
+  }
+}
+@media (max-width:375px){
+  .perguntas-porta{
+    background-size:auto 116%;
+    background-position:left center;
+  }
+}
+
+/* V55 — mobile: reposiciona apenas o CTA da seção da porta.
+   Ele fica no espaço intermediário entre o subtítulo e a frase inferior. */
+@media (max-width:600px){
+  .perguntas-link{top:190px;}
+}
+@media (max-width:375px){
+  .perguntas-link{top:184px;}
+}
+
+
+/* V56 — somente mobile: título em duas linhas, sem alterar fundo/enquadramento.
+   O espaço liberado sobe subtítulo e CTA; a frase final permanece isolada. */
+@media (max-width:600px){
+  .perguntas-copy h2{max-width:260px;}
+  .perguntas-copy>p{margin-top:20px;}
+  .perguntas-link{top:168px;}
+}
+@media (max-width:375px){
+  .perguntas-copy h2{max-width:250px;}
+  .perguntas-copy>p{margin-top:19px;}
+  .perguntas-link{top:162px;}
+}
+
+/* V57 — correção mobile: respeita literalmente as duas linhas já definidas no HTML.
+   Não altera fotografia, enquadramento, escala ou desktop. */
+@media (max-width:600px){
+  .perguntas-copy{width:88%;}
+  .perguntas-copy h2{max-width:310px; white-space:nowrap;}
+  .perguntas-copy>p{max-width:190px; margin-top:20px;}
+  .perguntas-link{top:168px;}
+}
+@media (max-width:375px){
+  .perguntas-copy{width:90%;}
+  .perguntas-copy h2{max-width:300px; white-space:nowrap;}
+  .perguntas-copy>p{max-width:185px; margin-top:19px;}
+  .perguntas-link{top:162px;}
+}
+
+/* V58 — seção "A psicanálise parte da escuta" conforme referência do Canva. */
+.escuta-processo{
+  position:relative;
+  width:100%;
+  min-height:480px;
+  padding:38px 4.7% 30px 4.7%;
+  display:grid;
+  grid-template-columns:43% 1fr;
+  column-gap:13.5%;
+  overflow:hidden;
+  background:linear-gradient(90deg,#f5f3eb 0%,#f7f5ef 52%,#f2f0e8 100%);
+  color:#27312c;
+}
+.escuta-esquerda{max-width:530px;}
+.escuta-esquerda h2{
+  margin:0 0 29px;
+  font-family:Aileron,Arial,sans-serif;
+  font-size:13.7px;
+  line-height:1.45;
+  font-weight:700;
+  color:#496763;
+  text-shadow:1px 1px 1px rgba(0,0,0,.18);
+}
+.escuta-texto{max-width:505px;}
+.escuta-texto p{
+  margin:0 0 14px;
+  font-family:Aileron,Arial,sans-serif;
+  font-size:12.7px;
+  line-height:1.55;
+  font-weight:400;
+  color:#27312c;
+  text-align:justify;
+}
+.escuta-direita{position:relative;min-height:390px;padding-top:83px;}
+.escuta-destaque{
+  position:relative;
+  z-index:2;
+  margin:0;
+  max-width:430px;
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:20.5px;
+  line-height:1.02;
+  font-weight:400;
+  color:#496763;
+  text-shadow:1px 1px 0 rgba(0,0,0,.28),2px 2px 0 rgba(73,103,99,.12);
+}
+.escuta-ornamento{
+  position:absolute;
+  z-index:1;
+  width:235px;
+  height:auto;
+  left:105px;
+  top:190px;
+  opacity:.52;
+  transform:rotate(2deg);
+}
+@media (min-width:1400px){
+  .escuta-processo{min-height:520px;padding-top:44px;}
+  .escuta-esquerda{max-width:575px;}
+  .escuta-texto{max-width:550px;}
+  .escuta-direita{padding-top:88px;}
+}
+@media (max-width:1000px){
+  .escuta-processo{grid-template-columns:48% 1fr;column-gap:7%;padding-left:5.5%;padding-right:5.5%;}
+}
+@media (max-width:700px){
+  .escuta-processo{
+    min-height:auto;
+    padding:36px 7% 58px;
+    display:block;
+  }
+  .escuta-esquerda,.escuta-texto{max-width:none;}
+  .escuta-esquerda h2{font-size:13.7px;margin-bottom:25px;}
+  .escuta-texto p{font-size:12.7px;line-height:1.55;margin-bottom:14px;text-align:left;}
+  .escuta-direita{min-height:235px;padding-top:42px;}
+  .escuta-destaque{font-size:20.5px;line-height:1.04;max-width:315px;}
+  .escuta-ornamento{width:180px;left:auto;right:-35px;top:128px;opacity:.46;}
+}
+
+
+/* V59 — assets oficiais fornecidos pelo usuário para a seção de escuta. */
+.escuta-processo{
+  background:#f5f3eb url("assets/fundo-escuta-oficial.webp") center center / cover no-repeat;
+}
+.escuta-ornamento{
+  content:url("assets/linha-organica-oficial.webp");
+  transform:none;
+}
+
+/* V60 — ajuste de respiro vertical no bloco esquerdo da seção de escuta.
+   Desce título + todo o texto esquerdo, sem alterar fundo, coluna direita ou demais elementos. */
+@media (min-width:701px){
+  .escuta-esquerda{transform:translateY(28px);}
+}
+
+/* V61 — refinamento exclusivo para smartphones da seção de escuta.
+   Desktop/tablet preservados. Compacta somente o fechamento: aproxima a frase Playfair
+   do último parágrafo e traz o ornamento oficial junto, sem alterar tipografia ou fundo. */
+@media (max-width:700px){
+  .escuta-direita{
+    min-height:205px;
+    padding-top:24px;
+  }
+  .escuta-ornamento{
+    top:106px;
+  }
+}
+
+/* V62 — mobile: respiro branco + bloco de leitura bege + fechamento branco.
+   Exclusivo para smartphones; desktop aprovado permanece intacto. */
+@media (max-width:700px){
+  .escuta-processo{
+    padding:34px 0 0;
+    background:#fff;
+    overflow:hidden;
+  }
+  .escuta-esquerda{
+    margin:0;
+    padding:34px 7% 28px;
+    background:#f5f3eb url("assets/fundo-escuta-oficial.webp") center center / cover no-repeat;
+  }
+  .escuta-esquerda h2{
+    margin-bottom:25px;
+  }
+  .escuta-texto p:last-child{
+    margin-bottom:0;
+  }
+  .escuta-direita{
+    min-height:245px;
+    padding:34px 7% 54px;
+    background:#fff;
+  }
+  .escuta-destaque{
+    max-width:315px;
+  }
+  .escuta-ornamento{
+    width:180px;
+    left:auto;
+    right:-35px;
+    top:118px;
+    opacity:.46;
+  }
+}
+
+/* V63 — correção mobile da seção Escuta.
+   Mantém o respiro branco ANTES do bloco, coloca título + texto integralmente
+   sobre a área bege e reserva o fechamento Playfair + linha orgânica para o branco. */
+@media (max-width:700px){
+  .escuta-processo{
+    padding-top:34px; /* faixa branca de respiro entre as seções */
+    background:#fff;
+  }
+  .escuta-esquerda{
+    padding:34px 7% 34px;
+    background-color:#f5f3eb;
+    background-image:url("assets/fundo-escuta-oficial.webp");
+    background-repeat:no-repeat;
+    background-size:cover;
+    /* desloca a faixa branca embutida no asset para fora do bloco visível */
+    background-position:center -150px;
+  }
+  .escuta-direita{
+    position:relative;
+    min-height:255px;
+    padding:42px 7% 62px;
+    background:#fff;
+    overflow:visible;
+  }
+  .escuta-ornamento{
+    display:block !important;
+    content:url("assets/linha-organica-oficial.webp");
+    position:absolute;
+    z-index:1;
+    width:180px;
+    height:auto;
+    right:-22px;
+    left:auto;
+    top:135px;
+    opacity:.52;
+    transform:none;
+  }
+  .escuta-destaque{position:relative;z-index:2;}
+}
+
+/* V64 — correção cirúrgica mobile: bege contínuo + linha orgânica visível. */
+@media (max-width:700px){
+  .escuta-processo{
+    padding-top:34px;
+    background:#fff;
+    overflow:hidden;
+  }
+  .escuta-esquerda{
+    margin:0;
+    padding:34px 7% 34px;
+    background:#f2f0e7 url("assets/fundo-escuta-mobile-bege.webp") center / 100% 100% no-repeat;
+  }
+  .escuta-direita{
+    position:relative;
+    min-height:280px;
+    padding:42px 7% 76px;
+    background:#fff;
+    overflow:hidden;
+  }
+  .escuta-ornamento{
+    display:block !important;
+    content:url("assets/linha-organica-oficial.webp");
+    position:absolute;
+    width:155px;
+    height:auto;
+    right:-18px;
+    left:auto;
+    top:145px;
+    opacity:.78;
+    z-index:1;
+  }
+  .escuta-destaque{position:relative;z-index:2;}
+}
+
+/* V65 — seção "O que pode começar a mudar quando você se escuta?" */
+.mudanca-escuta{
+  width:100%;
+  background:#fff;
+  color:#27312c;
+}
+.mudanca-pergunta{
+  min-height:86px;
+  display:flex;
+  align-items:center;
+  padding:0 5.2%;
+  background:#fff;
+}
+.mudanca-pergunta h2{
+  margin:0;
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:20.5px;
+  line-height:1.08;
+  font-weight:400;
+  color:#496763;
+  text-shadow:1px 1px 0 rgba(0,0,0,.24),2px 2px 0 rgba(73,103,99,.10);
+}
+.mudanca-corpo{
+  position:relative;
+  min-height:430px;
+  display:grid;
+  grid-template-columns:minmax(0,1.95fr) minmax(320px,.9fr);
+  gap:5.8%;
+  padding:14px 5.2% 34px;
+  background:#f2f0e7;
+  overflow:hidden;
+}
+.mudanca-conteudo{min-width:0;}
+.mudanca-intro{
+  margin:0 0 24px;
+  font:400 12.7px/1.45 Aileron,Arial,sans-serif;
+  color:#27312c;
+}
+.mudanca-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  column-gap:42px;
+  row-gap:28px;
+}
+.mudanca-item{
+  position:relative;
+  display:grid;
+  grid-template-columns:36px minmax(0,1fr);
+  gap:12px;
+  align-items:start;
+  min-height:62px;
+  padding-right:22px;
+}
+.mudanca-item:nth-child(odd)::after{
+  content:"";
+  position:absolute;
+  right:-21px;
+  top:2px;
+  width:1px;
+  height:44px;
+  background:rgba(189,184,141,.35);
+}
+.mudanca-item img{
+  width:34px;
+  height:34px;
+  object-fit:contain;
+  margin-top:2px;
+}
+.mudanca-item h3,
+.mudanca-item p{
+  margin:0;
+  font-family:Aileron,Arial,sans-serif;
+  font-size:12.7px;
+  line-height:1.35;
+  color:#496763;
+}
+.mudanca-item h3{
+  font-weight:700;
+  text-shadow:1px 1px 1px rgba(0,0,0,.15);
+  margin-bottom:2px;
+}
+.mudanca-item p{font-weight:400;}
+.mudanca-destaque{
+  position:relative;
+  padding-top:64px;
+  min-height:330px;
+}
+.mudanca-destaque p{
+  position:relative;
+  z-index:2;
+  margin:0;
+  max-width:350px;
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:20.5px;
+  line-height:1.02;
+  font-weight:400;
+  color:#496763;
+  text-shadow:1px 1px 0 rgba(0,0,0,.25),2px 2px 0 rgba(73,103,99,.10);
+}
+.mudanca-destaque img{
+  position:absolute;
+  z-index:1;
+  width:235px;
+  height:auto;
+  right:-12px;
+  bottom:-38px;
+  opacity:.55;
+}
+@media (max-width:1000px){
+  .mudanca-corpo{grid-template-columns:minmax(0,1.7fr) minmax(250px,.85fr);gap:4%;padding-left:4.5%;padding-right:4.5%;}
+  .mudanca-grid{column-gap:28px;row-gap:22px;}
+  .mudanca-item{grid-template-columns:31px 1fr;gap:9px;padding-right:14px;}
+  .mudanca-item img{width:29px;height:29px;}
+  .mudanca-item:nth-child(odd)::after{right:-14px;}
+  .mudanca-destaque p{font-size:18.5px;}
+  .mudanca-destaque img{width:190px;right:-18px;}
+}
+@media (max-width:700px){
+  .mudanca-pergunta{min-height:96px;padding:24px 7%;}
+  .mudanca-pergunta h2{font-size:20.5px;}
+  .mudanca-corpo{display:block;min-height:auto;padding:28px 7% 48px;}
+  .mudanca-intro{margin-bottom:24px;}
+  .mudanca-grid{grid-template-columns:1fr;gap:22px;}
+  .mudanca-item{grid-template-columns:34px 1fr;gap:11px;padding-right:0;}
+  .mudanca-item img{width:32px;height:32px;}
+  .mudanca-item:nth-child(odd)::after{display:none;}
+  .mudanca-destaque{min-height:220px;padding-top:40px;}
+  .mudanca-destaque p{font-size:20.5px;max-width:305px;}
+  .mudanca-destaque img{width:165px;right:-28px;bottom:-16px;opacity:.62;}
+}
+
+/* V66 — refinamento vertical dos destaques APENAS no desktop */
+@media (min-width:1001px){
+  /* Tela anterior: desce frase + linha orgânica como um conjunto */
+  .escuta-direita{padding-top:120px;}
+  .escuta-ornamento{top:227px;}
+
+  /* Tela "O que pode começar a mudar": desce frase + linha orgânica */
+  .mudanca-destaque{padding-top:99px;}
+  .mudanca-destaque img{bottom:-73px;}
+}
+
+/* V67 — redução do excesso bege SOMENTE NO DESKTOP.
+   Mantém tipografia, textos, colunas e mobile intactos. */
+@media (min-width:1001px){
+  /* Tela Escuta: aproximadamente 90 px menos de altura bege. */
+  .escuta-processo{min-height:390px;}
+
+  /* Tela Mudança: aproximadamente 120 px menos de altura bege. */
+  .mudanca-corpo{min-height:310px;padding-bottom:20px;}
+  .mudanca-destaque{min-height:260px;}
+  .mudanca-destaque img{bottom:-42px;}
+}
+@media (min-width:1400px){
+  /* Sobrescreve o min-height de 520 px da regra desktop largo anterior. */
+  .escuta-processo{min-height:430px;}
+}
+
+/* V68 — SOMENTE CELULAR: destaque final da tela Mudança em faixa branca.
+   Desktop e tablet/iPad permanecem exatamente como na V67. */
+@media (max-width:700px){
+  .mudanca-corpo{
+    padding-bottom:0;
+    overflow:hidden;
+  }
+  .mudanca-destaque{
+    box-sizing:border-box;
+    width:auto;
+    min-height:230px;
+    margin:30px -7% 0;
+    padding:40px 7% 34px;
+    background:#fff;
+    overflow:hidden;
+  }
+  .mudanca-destaque p{
+    position:relative;
+    z-index:2;
+  }
+  .mudanca-destaque img{
+    right:-28px;
+    bottom:-16px;
+  }
+}
+
+/* V69 — Como funciona o atendimento */
+.atendimento{width:100%;background:#fff;color:#27312c;}
+.atendimento-titulo{height:78px;display:flex;align-items:center;padding:0 5.2%;background:#fff;}
+.atendimento-titulo h2{margin:0;font-family:"Playfair Display",Georgia,serif;font-size:20.5px;line-height:1.08;font-weight:400;color:#496763;text-shadow:1px 1px 0 rgba(0,0,0,.24),2px 2px 0 rgba(73,103,99,.10);}
+.atendimento-passos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:38px;padding:30px 5.2% 25px;background:#f2f0e7 url('assets/fundo-atendimento-oficial.webp') center 41%/cover no-repeat;}
+.atendimento-passo{min-width:0;}
+.passo-cab{display:grid;grid-template-columns:28px 27px 1fr;align-items:center;gap:8px;min-height:42px;margin-bottom:13px;}
+.passo-num{font-family:"Della Respira",Georgia,serif;font-size:31px;line-height:1;color:#4e642b;}
+.passo-cab img{width:27px;height:36px;object-fit:cover;object-position:left center;}
+.passo-cab h3{margin:0;font-family:Aileron,Arial,sans-serif;font-size:13.7px;line-height:1.18;font-weight:700;color:#4e642b;text-shadow:1px 1px 1px rgba(0,0,0,.16);}
+.atendimento-passo>p{margin:0 0 0 20px;font-family:Aileron,Arial,sans-serif;font-size:12px;line-height:1.55;font-weight:400;color:#496763;text-shadow:1px 1px 1px rgba(0,0,0,.12);text-align:justify;}
+.atendimento-sigilo{margin:0;padding:7px 5.2% 0;font-family:Aileron,Arial,sans-serif;font-size:12px;line-height:1.2;color:#27312c;background:#fff;}
+.atendimento-fecho{position:relative;min-height:220px;background:#fff;overflow:hidden;}
+.atendimento-frase{position:absolute;z-index:2;left:50.5%;top:24px;width:43%;max-width:640px;margin:0;font-family:"Playfair Display",Georgia,serif;font-size:20.5px;line-height:1.08;font-weight:400;color:#496763;text-shadow:1px 1px 0 rgba(0,0,0,.24),2px 2px 0 rgba(73,103,99,.10);}
+.atendimento-linha{position:absolute;z-index:1;left:29%;bottom:-105px;width:235px;height:auto;opacity:.6;}
+.atendimento-cta{position:absolute;right:5.2%;bottom:28px;display:flex;align-items:center;gap:12px;text-decoration:none;font-family:Garet,Arial,sans-serif;font-size:11px;color:#4e642b;}
+.atendimento-cta span{display:grid;place-items:center;width:29px;height:20px;border-radius:12px;background:#496763;color:#fff;font:16px/1 Arial,sans-serif;}
+@media(max-width:1000px){.atendimento-passos{gap:20px;padding-left:4.5%;padding-right:4.5%;}.atendimento-passo>p{margin-left:0}.passo-cab{grid-template-columns:23px 23px 1fr;gap:6px}.passo-num{font-size:27px}.passo-cab img{width:23px;height:31px}.passo-cab h3{font-size:12.5px}.atendimento-frase{left:49%;width:45%;font-size:18.5px}.atendimento-linha{left:27%;}}
+@media(max-width:700px){.atendimento-titulo{height:88px;padding:0 7%;}.atendimento-titulo h2{font-size:20.5px}.atendimento-passos{display:block;padding:26px 7% 18px;background:#f2f0e7;background-image:none;}.atendimento-passo{margin-bottom:28px}.passo-cab{grid-template-columns:30px 27px 1fr;margin-bottom:8px}.passo-num{font-size:30px}.passo-cab img{width:27px;height:36px}.passo-cab h3{font-size:13.7px}.atendimento-passo>p{margin-left:65px;font-size:12px;text-align:left;line-height:1.48}.atendimento-sigilo{padding:8px 7% 0;font-size:11px;white-space:normal}.atendimento-fecho{min-height:280px}.atendimento-frase{position:relative;left:auto;top:auto;width:auto;max-width:none;margin:0;padding:36px 7% 0;font-size:20.5px}.atendimento-linha{left:-8px;bottom:-85px;width:190px}.atendimento-cta{right:7%;bottom:28px;font-size:11px}}
+
+/* V70 — ajuste fino da seção "Como funciona" conforme layout aprovado no Canva — DESKTOP */
+@media (min-width:1001px){
+  .atendimento-titulo{
+    height:58px;
+  }
+  .atendimento-passos{
+    gap:30px;
+    padding-top:24px;
+    padding-bottom:20px;
+  }
+  .atendimento-sigilo{
+    padding-top:5px;
+  }
+  .atendimento-fecho{
+    min-height:200px;
+  }
+  .atendimento-frase{
+    top:12px;
+  }
+  .atendimento-linha{
+    left:31.5%;
+    bottom:-68px;
+    width:205px;
+  }
+  .atendimento-cta{
+    bottom:24px;
+  }
+}
+
+/* V71 — ajuste cirúrgico de proporções da seção "Como funciona" — DESKTOP */
+@media (min-width:1001px){
+  /* número encostado ao ícone, como na arte de referência */
+  .passo-cab{
+    grid-template-columns:18px 27px minmax(0,1fr);
+    column-gap:4px;
+    margin-bottom:10px;
+  }
+  .passo-num{justify-self:start;}
+  .passo-cab img{justify-self:start;}
+
+  /* o corpo começa alinhado visualmente ao ícone e fica mais estreito,
+     recuperando as 4–5 linhas da composição original */
+  .atendimento-passo>p{
+    margin-left:22px;
+    max-width:245px;
+    line-height:1.48;
+    text-align:justify;
+  }
+
+  /* mantém as colunas no mesmo lugar, mas compacta ligeiramente o conjunto */
+  .atendimento-passos{
+    gap:28px;
+    padding-top:22px;
+    padding-bottom:18px;
+  }
+
+  /* frase inferior: largura editorial da referência, em três linhas */
+  .atendimento-frase{
+    left:49.5%;
+    top:20px;
+    width:430px;
+    max-width:430px;
+    line-height:1.08;
+  }
+
+  /* linha orgânica: usa o mesmo desenho oficial, apenas recortado da área
+     transparente para permitir posicionamento fiel */
+  .atendimento-linha{
+    content:url('assets/linha-organica-oficial.webp');
+    left:31.8%;
+    top:84px;
+    bottom:auto;
+    width:178px;
+    height:auto;
+    opacity:.60;
+  }
+
+  .atendimento-fecho{min-height:205px;}
+  .atendimento-cta{right:5.2%;bottom:31px;}
+}
+
+
+/* V72 — padronização da linha orgânica oficial.
+   Todas as ocorrências usam assets/linha-organica-oficial.webp;
+   cada seção mantém apenas suas regras de tamanho/posição responsivas. */
+
+/* V73 — aprimoramentos de experiência e interação.
+   Somente estados de interação (hover/foco), transições suaves e revelação
+   ao rolar. Não altera nenhuma posição, tamanho, cor de fundo ou tipografia
+   já aprovados nas versões anteriores. */
+
+/* Acessibilidade de teclado: indicador de foco discreto e no tom da marca. */
+a:focus-visible,button:focus-visible{
+  outline:2px solid #496763;
+  outline-offset:3px;
+  border-radius:4px;
+}
+
+/* Links e botões ganham feedback de interação sem mudar layout. */
+.cabecalho nav a{position:relative;transition:color .25s ease}
+.cabecalho nav a:hover{color:#496763}
+.cabecalho nav a::after{
+  content:"";position:absolute;left:0;right:100%;bottom:-8px;height:1px;
+  background:#496763;transition:right .25s ease;
+}
+.cabecalho nav a:hover::after{right:0}
+
+.btn{transition:background-color .25s ease,transform .2s ease,box-shadow .25s ease}
+.btn:hover{background-color:#3a5450;transform:translateY(-1px);box-shadow:0 4px 12px rgba(24,54,39,.18)}
+.btn:active{transform:translateY(0)}
+
+.link-seta{transition:color .2s ease}
+.link-seta i{transition:background-color .25s ease,transform .25s ease}
+.link-seta:hover i{background-color:#3a5450;transform:translateX(3px)}
+
+.perguntas-link,.atendimento-cta{transition:opacity .25s ease,transform .2s ease}
+.perguntas-link:hover,.atendimento-cta:hover{opacity:.82}
+.perguntas-link:hover i,.atendimento-cta:hover span{transform:translateX(3px)}
+.perguntas-link i,.atendimento-cta span{transition:transform .25s ease}
+
+.entrar{transition:opacity .25s ease}
+.entrar:hover{opacity:.8}
+.entrar i{transition:transform .25s ease}
+.entrar:hover i{transform:translateX(2px)}
+
+/* Ícone do menu mobile: as três linhas se tornam um X ao abrir. */
+.menu-toggle span{transition:transform .28s ease,opacity .2s ease}
+.menu-toggle.aberto span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-toggle.aberto span:nth-child(2){opacity:0}
+.menu-toggle.aberto span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.cabecalho nav a{transition:color .25s ease,background-color .25s ease}
+@media (max-width:700px){
+  .cabecalho nav a:hover{background-color:rgba(73,103,99,.06)}
+  .cabecalho nav a::after{display:none}
+}
+
+/* Revelação suave dos blocos de conteúdo ao entrar na tela.
+   Apenas opacidade: nunca interfere em posição, alinhamento ou transform
+   já usados pelas seções (ex.: .escuta-esquerda). */
+.reveal{opacity:0;transition:opacity .7s ease}
+.reveal.in-view{opacity:1}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1!important;transition:none}
+  .btn,.link-seta i,.perguntas-link,.atendimento-cta,.entrar,.menu-toggle span,.cabecalho nav a::after{
+    transition:none!important;
+  }
+}
+
+/* V80 — Roberto Duarte: nova tela baseada na referência aprovada */
+.roberto-perfil{position:relative;display:grid;grid-template-columns:24.6% 75.4%;grid-template-rows:minmax(502px,auto) 66px;width:100%;background:#fff;overflow:hidden}
+.roberto-foto-wrap{grid-column:1;grid-row:1;overflow:hidden;background:#111}
+.roberto-foto{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 42%}
+.roberto-conteudo{position:relative;grid-column:2;grid-row:1;padding:15px 29% 28px 4.5%;background:#f1efe5 url('assets/fundo-roberto.webp') center/cover no-repeat;color:#000}
+.roberto-conteudo h2{margin:0 0 15px;font-family:"Playfair Display",Georgia,serif;font-size:20.5px;line-height:1.1;font-weight:400;color:#183627;text-shadow:1px 1px 0 rgba(0,0,0,.24),2px 2px 0 rgba(24,54,39,.08)}
+.roberto-conteudo p{max-width:660px;margin:0 0 31px;font-family:Aileron,Arial,sans-serif;font-size:12.7px;line-height:1.62;font-weight:400;color:#000;text-align:justify}
+.roberto-conteudo p:last-of-type{margin-bottom:0}
+.roberto-ornamento{position:absolute;right:-1px;top:178px;width:235px;height:auto;opacity:.72}
+.roberto-assinatura{grid-column:1/3;grid-row:2;justify-self:end;align-self:center;margin-right:7.3%;width:255px;color:#183627;font-family:"Playfair Display",Georgia,serif;text-align:left}
+.roberto-assinatura span{display:block;font-size:25px;line-height:1;border-bottom:1px solid rgba(24,54,39,.45);padding:0 10px 3px}
+.roberto-assinatura small{display:block;padding:5px 12px 0;font-family:Aileron,Arial,sans-serif;font-size:11px;letter-spacing:4px}
+@media(max-width:700px){
+ .roberto-perfil{display:block}
+ .roberto-foto-wrap{height:420px}
+ .roberto-foto{object-position:50% 38%}
+ .roberto-conteudo{padding:30px 7% 115px;background-position:center}
+ .roberto-conteudo h2{font-size:20.5px;margin-bottom:20px}
+ .roberto-conteudo p{font-size:12.7px;line-height:1.55;margin-bottom:25px;text-align:left}
+ .roberto-ornamento{width:150px;right:-25px;bottom:18px;top:auto}
+ .roberto-assinatura{width:220px;margin:18px 7% 20px auto}
+ .roberto-assinatura span{font-size:21px}.roberto-assinatura small{font-size:10px;letter-spacing:3px}
+}
+
+/* V81 — ajuste cirúrgico da seção Roberto Duarte (desktop) */
+@media (min-width:1025px){
+  .roberto-perfil{
+    grid-template-columns:24.6% 75.4%;
+    grid-template-rows:502px 66px;
+  }
+  .roberto-foto-wrap{height:502px;}
+  .roberto-foto{height:502px;object-fit:cover;object-position:50% 42%;}
+  .roberto-conteudo{
+    height:502px;
+    box-sizing:border-box;
+    padding:15px 29% 28px 4.5%;
+    background:#f1efe5;
+  }
+  .roberto-conteudo p{max-width:625px;}
+  .roberto-ornamento{
+    right:-1px;
+    top:175px;
+    width:235px;
+    height:auto;
+    opacity:1;
+    background:transparent;
+  }
+}
+
+/* V83 — perfil mais compacto: corte superior da foto + redução proporcional da faixa bege */
+@media (min-width:1025px){
+  .roberto-perfil{
+    grid-template-columns:23.5% 76.5%;
+    grid-template-rows:450px 66px;
+  }
+  .roberto-foto-wrap{
+    height:450px;
+  }
+  .roberto-foto{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    object-position:50% 34%;
+    transform:scale(1.08);
+    transform-origin:50% 42%;
+  }
+  .roberto-conteudo{
+    height:450px;
+    padding-top:14px;
+    padding-bottom:22px;
+  }
+  .roberto-conteudo h2{
+    font-size:21.5px;
+  }
+  .roberto-conteudo p{
+    font-size:13.2px;
+    line-height:1.58;
+    margin-bottom:26px;
+  }
+  .roberto-ornamento{
+    top:150px;
+    width:220px;
+  }
+}
+
+/* V85 — Roberto Duarte: fluidez e proporções alinhadas à referência */
+@media (min-width:1025px){
+  .roberto-perfil{
+    grid-template-columns:27.6% 72.4%;
+    grid-template-rows:450px 66px;
+  }
+  .roberto-foto-wrap{height:450px;}
+  .roberto-foto{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center center;
+    transform:none;
+  }
+  .roberto-conteudo{
+    height:450px;
+    box-sizing:border-box;
+    padding:10px 18.5% 18px 1.8%;
+    background:#f1efe5 url('assets/fundo-roberto.webp') center/cover no-repeat;
+  }
+  .roberto-conteudo h2{
+    margin:0 0 13px;
+    font-size:20.5px;
+    line-height:1.08;
+  }
+  .roberto-conteudo p{
+    max-width:520px;
+    margin:0 0 23px;
+    font-size:12.7px;
+    line-height:1.58;
+    text-align:justify;
+  }
+  .roberto-ornamento{
+    right:-1px;
+    top:116px;
+    width:168px;
+    opacity:.52;
+  }
+  .roberto-assinatura{
+    margin-right:7.3%;
+  }
+}
+
+/* V86 — geometria cirúrgica conforme referência: título e assinatura no branco */
+@media (min-width:1025px){
+  .roberto-perfil{
+    grid-template-columns:27.6% 72.4%;
+    grid-template-rows:450px;
+    height:450px;
+    background:#fff;
+  }
+  .roberto-foto-wrap{
+    grid-column:1;
+    grid-row:1;
+    height:450px;
+  }
+  .roberto-foto{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    object-position:center center;
+    transform:none;
+  }
+  .roberto-conteudo{
+    position:relative;
+    grid-column:2;
+    grid-row:1;
+    height:450px;
+    box-sizing:border-box;
+    padding:8px 18.5% 0 1.8%;
+    background:#fff;
+    overflow:hidden;
+    z-index:1;
+  }
+  .roberto-conteudo::before{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    left:0;
+    right:0;
+    top:40px;
+    bottom:58px;
+    background:#f1efe5 url('assets/fundo-roberto.webp') center/cover no-repeat;
+  }
+  .roberto-conteudo h2{
+    margin:0 0 19px;
+    font-size:20.5px;
+    line-height:1.1;
+  }
+  .roberto-conteudo p{
+    max-width:540px;
+    margin:0 0 23px;
+    font-size:12.7px;
+    line-height:1.58;
+    text-align:justify;
+  }
+  .roberto-conteudo p:last-of-type{margin-bottom:0;}
+  .roberto-ornamento{
+    right:-1px;
+    top:116px;
+    width:235px;
+    opacity:.72;
+  }
+  .roberto-assinatura{
+    position:absolute;
+    z-index:3;
+    right:7.3%;
+    bottom:5px;
+    width:255px;
+    margin:0;
+    color:#183627;
+  }
+}
+
+/* V87 — somente acomodação do novo texto; demais elementos preservados */
+@media (min-width:1025px){
+  .roberto-conteudo p{max-width:780px;margin-bottom:13px;font-size:12.7px;line-height:1.42;}
+}
+
+/* V88 — refinamento exclusivo da legibilidade do texto Roberto Duarte */
+@media (min-width:1025px){
+  .roberto-conteudo p{
+    max-width:710px;
+    margin-bottom:15px;
+    font-size:12.7px;
+    line-height:1.55;
+    letter-spacing:.1px;
+    text-align:justify;
+  }
+  .roberto-conteudo p:last-of-type{margin-bottom:0;}
+}
+
+
+/* V89 — correção responsiva SOMENTE até 1024px.
+   Desktop >=1025px permanece com a geometria V88 aprovada. */
+@media (min-width:1025px){
+  .roberto-texto{display:contents;}
+}
+
+@media (max-width:1024px){
+  .roberto-conteudo{
+    background:#fff;
+    padding:0;
+    overflow:visible;
+  }
+  .roberto-conteudo h2{
+    background:#fff;
+    margin:0;
+    padding:22px 7% 18px;
+  }
+  .roberto-texto{
+    position:relative;
+    box-sizing:border-box;
+    width:100%;
+    padding:18px 7% 22px;
+    background:#f1efe5 url('assets/fundo-roberto.webp') center/cover no-repeat;
+    overflow:hidden;
+  }
+  .roberto-texto p{
+    position:relative;
+    z-index:2;
+  }
+  .roberto-texto .roberto-ornamento{
+    z-index:1;
+  }
+}
+
+@media (max-width:700px){
+  .roberto-conteudo{padding:0;background:#fff;}
+  .roberto-conteudo h2{padding:26px 7% 18px;margin:0;}
+  .roberto-texto{padding:8px 7% 18px;}
+  .roberto-texto p{margin-bottom:25px;}
+  .roberto-texto p:last-of-type{margin-bottom:0;}
+  .roberto-texto .roberto-ornamento{
+    position:relative;
+    display:block;
+    width:150px;
+    height:auto;
+    margin:18px -25px 0 auto;
+    right:auto;
+    bottom:auto;
+    top:auto;
+  }
+}
+
+/* V90 — ajuste EXCLUSIVO para tablet (701–1024px).
+   Desktop >=1025px e celulares <=700px permanecem inalterados. */
+@media (min-width:701px) and (max-width:1024px){
+  .roberto-texto{
+    padding:18px 7% 22px;
+  }
+  .roberto-texto p{
+    max-width:68%;
+    margin-right:auto;
+  }
+  .roberto-texto .roberto-ornamento{
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    width:23%;
+    max-width:190px;
+    height:auto;
+  }
+}
+
+/* V91 — refinamento EXCLUSIVO do iPad/tablet (701–1024px).
+   Desktop >=1025px e celulares <=700px permanecem exatamente como na V90. */
+@media (min-width:701px) and (max-width:1024px){
+  .roberto-texto p{
+    max-width:76%;
+  }
+  .roberto-texto .roberto-ornamento{
+    right:0;
+    width:25%;
+    max-width:205px;
+  }
+}
+
+/* V93 — ajuste exclusivo da seção de reflexão final. Seções anteriores preservadas. */
+.reflexao-faixa{
+  width:100%;
+  height:58px;
+  background:#fff;
+}
+.reflexao-final{
+  position:relative;
+  width:100%;
+  aspect-ratio:1366 / 768;
+  min-height:0;
+  background-image:url('assets/fundo-reflexao.webp');
+  background-size:100% 100%;
+  background-position:center;
+  background-repeat:no-repeat;
+  overflow:hidden;
+}
+.reflexao-final__principal{
+  position:absolute;
+  top:8.5%; left:13.1%;
+  width:min(650px,55%);
+  margin:0;
+  font-family:'Playfair Display',serif;
+  font-size:20.5px;
+  line-height:1.28;
+  font-weight:400;
+  color:#e0dabd;
+}
+.reflexao-final__secundaria{
+  position:absolute;
+  right:6.9%; bottom:10.7%;
+  width:190px;
+  margin:0;
+  font-family:'Bebas Neue',sans-serif;
+  font-size:12px;
+  line-height:1.18;
+  letter-spacing:.035em;
+  color:rgba(217,217,217,.70);
+  text-transform:uppercase;
+}
+@media (max-width:1024px){
+ .reflexao-faixa{height:58px;}
+ .reflexao-final{aspect-ratio:1366 / 768;min-height:0;background-size:100% 100%;}
+ .reflexao-final__principal{top:8.5%;left:13%;width:58%;font-size:18px;}
+ .reflexao-final__secundaria{right:6.9%;bottom:10.7%;width:155px;font-size:11px;}
+}
+@media (max-width:700px){
+ .reflexao-faixa{height:58px;}
+ .reflexao-final{aspect-ratio:1366 / 768;min-height:0;background-size:100% 100%;}
+ .reflexao-final__principal{top:8%;left:8%;width:72%;font-size:15px;line-height:1.25;}
+ .reflexao-final__secundaria{right:6%;bottom:9.5%;width:120px;font-size:9px;text-align:left;}
+}
+
+/* V94 — somente escala visual da seção de reflexão no desktop.
+   Tipografia preservada exatamente em 20.5px e 12px. */
+@media (min-width:1025px){
+  .reflexao-final{
+    aspect-ratio:auto;
+    height:min(600px, 44vw);
+    min-height:520px;
+    background-size:100% 100%;
+    background-position:center;
+  }
+  .reflexao-final__principal{
+    font-size:20.5px;
+  }
+  .reflexao-final__secundaria{
+    font-size:12px;
+  }
+}
+
+/* V95 — ajuste cirúrgico apenas da posição dos textos da reflexão no desktop. */
+@media (min-width:1025px){
+  .reflexao-final__principal{
+    left:15.8%;
+  }
+  .reflexao-final__secundaria{
+    bottom:14.5%;
+  }
+}
+
+/* V96 — responsividade exclusiva da reflexão final. Desktop V95 preservado. */
+/* Tablet / iPad: mais presença tipográfica, sem alterar a geometria aprovada do desktop. */
+@media (min-width:701px) and (max-width:1024px){
+  .reflexao-final__principal{
+    top:8.5%;
+    left:13.8%;
+    width:54%;
+    font-size:23px;
+    line-height:1.26;
+  }
+  .reflexao-final__secundaria{
+    right:8.2%;
+    bottom:13.5%;
+    width:150px;
+    font-size:12px;
+    line-height:1.18;
+  }
+}
+
+/* Celulares: seção um pouco mais alta, mantendo a escala dos textos. */
+@media (max-width:700px){
+  .reflexao-final{
+    aspect-ratio:auto;
+    height:68vw;
+    min-height:245px;
+    max-height:285px;
+    background-size:100% 100%;
+    background-position:center;
+  }
+  .reflexao-final__principal{
+    top:10%;
+    left:11%;
+    width:76%;
+    font-size:15px;
+    line-height:1.25;
+  }
+  .reflexao-final__secundaria{
+    right:8%;
+    bottom:12.5%;
+    width:120px;
+    font-size:9px;
+    line-height:1.18;
+    text-align:left;
+  }
+}
+
+/* V97 — deslocamento horizontal exclusivo do texto principal da reflexão. */
+@media (min-width:1025px){
+  .reflexao-final__principal{ left:calc(15.8% + 10px); }
+}
+@media (min-width:701px) and (max-width:1024px){
+  .reflexao-final__principal{ left:calc(13.8% + 8px); }
+}
+@media (max-width:700px){
+  .reflexao-final__principal{ left:calc(11% + 6px); }
+}
+\n\n/* V99 — Perguntas Frequentes: reprodução fiel da referência */
+.faq-final{background:#fff;padding:0;margin:0;color:#496763;}
+.faq-final__titulo{font-family:"Playfair Display",Georgia,serif;font-size:20.5px;line-height:1.2;color:#496763;padding:11px 5.2% 14px;text-shadow:0 1px 1px rgba(0,0,0,.32);}
+.faq-final__painel{position:relative;overflow:hidden;background:linear-gradient(105deg,#f8f6ef 0%,#f4f2e9 56%,#efeee7 100%);padding:17px 5.2% 14px;min-height:327px;box-sizing:border-box;}
+.faq-final__grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:40px;row-gap:34px;align-items:start;}
+.faq-item{position:relative;display:grid;grid-template-columns:23px 1fr;gap:8px;align-items:start;min-width:0;padding-left:7px;box-sizing:border-box;}
+.faq-item::before{content:"";position:absolute;left:0;top:2px;width:1px;height:35px;background:rgba(205,194,160,.42);}
+.faq-item>div{min-width:0;}
+.faq-item h3,.faq-item p{font-family:Aileron,Arial,sans-serif;color:#496763;text-shadow:0 1px 1px rgba(0,0,0,.30);margin:0;}
+.faq-item h3{font-size:12.7px;line-height:1.25;font-weight:700;margin-bottom:4px;}
+.faq-item p{font-size:12px;line-height:1.38;font-weight:400;text-align:justify;}
+.faq-icone{display:block;width:23px;height:35px;object-fit:contain;object-position:center top;}
+.faq-final__linha{position:absolute;z-index:1;right:3.2%;bottom:-72px;width:205px;height:auto;opacity:.56;transform:none;transform-origin:center;}
+@media (min-width:701px) and (max-width:1024px){
+ .faq-final__titulo{padding:11px 5.2% 14px;font-size:20.5px;}
+ .faq-final__painel{padding:17px 5.2% 14px;min-height:327px;}
+ .faq-final__grid{column-gap:28px;row-gap:31px;}
+ .faq-item{grid-template-columns:22px 1fr;gap:7px;padding-left:6px;}
+ .faq-icone{width:22px;height:34px;}
+ .faq-item h3{font-size:12.7px}.faq-item p{font-size:12px;}
+ .faq-final__linha{width:190px;right:2.5%;bottom:-68px;}
+}
+@media (max-width:700px){
+ .faq-final__titulo{padding:20px 8% 15px;font-size:20.5px;}
+ .faq-final__painel{padding:20px 8% 38px;min-height:0;}
+ .faq-final__grid{grid-template-columns:1fr;gap:25px;}
+ .faq-item{grid-template-columns:23px 1fr;gap:8px;padding-left:7px;}
+ .faq-item h3{font-size:12.7px}.faq-item p{font-size:12px;text-align:left;}
+ .faq-final__linha{width:175px;right:-38px;bottom:-64px;opacity:.48;}
+}
+
+/* V100 — FAQ: faixas branca superior/inferior e linha orgânica conforme referência */
+.faq-final{position:relative;overflow:hidden;}
+.faq-final__titulo{padding-top:16px;padding-bottom:15px;}
+.faq-final__painel{overflow:visible;}
+.faq-final__rodape{height:52px;background:#fff;}
+.faq-final__linha{right:3.2%;bottom:-52px;width:205px;opacity:.56;}
+@media (min-width:701px) and (max-width:1100px){
+ .faq-final__titulo{padding-top:16px;padding-bottom:15px;}
+ .faq-final__rodape{height:52px;}
+ .faq-final__linha{width:190px;right:2.5%;bottom:-52px;}
+}
+@media (max-width:700px){
+ .faq-final__titulo{padding-top:22px;padding-bottom:17px;}
+ .faq-final__rodape{height:46px;}
+ .faq-final__linha{width:175px;right:-38px;bottom:-46px;opacity:.48;}
+}
+
+/* V101 — tela final de contato, conforme referência aprovada */
+.contato-final{position:relative;background:#fff;color:#183627;overflow:hidden}
+.contato-final__imagem{position:relative;width:100%;height:276px;overflow:hidden}
+.contato-final__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center}
+.contato-final__texto{position:absolute;z-index:2;left:7.1%;top:38px;color:#fff}
+.contato-final__texto h2{margin:0;font-family:"Playfair Display",Georgia,serif;font-size:20.5px;line-height:1.35;font-weight:600;color:#e9e3cc;text-shadow:1px 1px 1px rgba(0,0,0,.45)}
+.contato-final__texto p{margin:30px 0 0;font-family:Aileron,Arial,sans-serif;font-size:13px;line-height:1.62;font-weight:400;letter-spacing:.2px;color:#fff;text-shadow:1px 1px 1px rgba(0,0,0,.65)}
+.contato-final__acao{position:relative;z-index:2;height:84px;padding:9px 7.1%;display:flex;justify-content:space-between;align-items:flex-start;background:#fff}
+.contato-final__acao>p{margin:0;font-family:Garet,Arial,sans-serif;font-size:11px;line-height:1.25;color:#4e642b}
+.contato-final__whatsapp{display:flex;align-items:center;gap:18px;margin-right:1.5%;text-decoration:none;font-family:Garet,Arial,sans-serif;font-size:11px;line-height:1.12;font-weight:700;color:#183627}
+.contato-final__whatsapp i{width:34px;height:22px;border-radius:14px;display:grid;place-items:center;background:#4e642b;color:#fff;font:normal 18px/1 Arial,sans-serif}
+.contato-final__rodape{position:relative;min-height:72px;border-top:1px solid rgba(73,103,99,.35);display:flex;align-items:center;justify-content:center;gap:54px;padding:10px 7%;font-family:Garet,Arial,sans-serif;font-size:11px;line-height:1.22;color:#183627;overflow:visible}
+.contato-final__identidade{min-width:165px}
+.contato-final__dados{border-left:2px solid rgba(155,142,88,.55);padding-left:13px;min-width:360px}
+.contato-final__identidade strong,.contato-final__dados strong{font-weight:700}
+.contato-final__linha{position:absolute;z-index:1;left:-18px;bottom:-104px;width:190px;height:auto;opacity:.38;pointer-events:none}
+.contato-final__identidade,.contato-final__dados{position:relative;z-index:2}
+@media(max-width:1100px) and (min-width:701px){
+ .contato-final__imagem{height:255px}.contato-final__texto{left:7%;top:32px}.contato-final__acao{padding-left:7%;padding-right:5%}.contato-final__rodape{gap:35px;padding-left:17%;font-size:10.5px}.contato-final__linha{width:165px;bottom:-92px}
+}
+@media(max-width:700px){
+ .contato-final__imagem{height:365px}.contato-final__bg{object-position:center center}.contato-final__texto{left:7.5%;top:30px;right:7%}.contato-final__texto h2{font-size:20.5px;line-height:1.35}.contato-final__texto p{margin-top:27px;font-size:13px;line-height:1.58;letter-spacing:.2px}
+ .contato-final__acao{height:112px;padding:12px 7.5%;display:block}.contato-final__acao>p{font-size:11px;line-height:1.28}.contato-final__whatsapp{position:absolute;right:7%;bottom:13px;margin:0;gap:12px;font-size:11px}.contato-final__whatsapp i{width:34px;height:22px}
+ .contato-final__rodape{min-height:126px;display:grid;grid-template-columns:1fr;gap:10px;align-content:center;padding:18px 7.5% 18px 25%;font-size:11px}.contato-final__dados{min-width:0;border-left:0;padding-left:0}.contato-final__linha{left:-36px;bottom:-52px;width:165px;opacity:.34}
+}
+
+/* V103 — contato final: mais respiro vertical na imagem e rodapé ampliado */
+@media(min-width:1101px){
+ .contato-final__imagem{height:330px;}
+ .contato-final__bg{object-fit:cover;object-position:center center;}
+ .contato-final__texto{top:46px;}
+ .contato-final__rodape{min-height:92px;padding:14px 7%;gap:62px;font-size:13px;line-height:1.28;}
+ .contato-final__identidade{min-width:190px;}
+ .contato-final__dados{min-width:420px;padding-left:16px;}
+}
+@media(max-width:1100px) and (min-width:701px){
+ .contato-final__imagem{height:300px;}
+ .contato-final__texto{top:38px;}
+ .contato-final__rodape{min-height:88px;padding-top:14px;padding-bottom:14px;font-size:12px;line-height:1.28;}
+}
+@media(max-width:700px){
+ .contato-final__imagem{height:410px;}
+ .contato-final__texto{top:38px;}
+ .contato-final__rodape{min-height:145px;font-size:12px;line-height:1.3;padding-top:22px;padding-bottom:22px;}
+}
+
+/* V104 — ajuste exclusivo para celular: contraste da foto e compactação pós-imagem */
+@media(max-width:700px){
+ .contato-final__imagem::after{content:"";position:absolute;inset:0;z-index:1;background:rgba(5,18,14,.26);pointer-events:none;}
+ .contato-final__texto{z-index:2;}
+ .contato-final__acao{height:92px;padding-top:10px;padding-bottom:8px;}
+ .contato-final__whatsapp{bottom:10px;}
+ .contato-final__rodape{min-height:128px;padding-top:12px;padding-bottom:12px;gap:7px;}
+}
+
+/* V105 — correção exclusiva para celulares:
+   remove as margens brancas embutidas no fundo e aproxima os blocos abaixo da foto. */
+@media(max-width:700px){
+  .contato-final__imagem{
+    height:330px;
+  }
+  .contato-final__bg{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center center;
+  }
+  .contato-final__acao{
+    height:72px;
+    padding-top:6px;
+    padding-bottom:4px;
+  }
+  .contato-final__acao>p{
+    margin-top:0;
+  }
+  .contato-final__whatsapp{
+    bottom:6px;
+  }
+  .contato-final__rodape{
+    min-height:114px;
+    padding-top:8px;
+    padding-bottom:8px;
+  }
+}
+
+/* V106 — refinamento EXCLUSIVO da última tela em celulares. Desktop e iPad permanecem intactos. */
+.contato-final__titulo-mobile,
+.contato-final__corpo-mobile,
+.contato-final__icone-mobile{display:none}
+
+@media(max-width:700px){
+  .contato-final__imagem{height:306px}
+  .contato-final__bg{object-fit:cover;object-position:center center}
+  .contato-final__imagem::after{background:rgba(5,18,14,.08)}
+
+  /* No celular, os textos fornecidos pelo usuário reproduzem exatamente tipografia/cor da referência. */
+  .contato-final__texto{position:absolute;inset:0;left:0;top:0;right:auto;color:transparent}
+  .contato-final__texto h2,
+  .contato-final__texto p{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+  .contato-final__titulo-mobile{display:block;position:absolute;z-index:3;left:43.4%;top:16px;width:58.3%;height:auto}
+  .contato-final__corpo-mobile{display:block;position:absolute;z-index:3;left:64.4%;top:163px;width:39.1%;height:auto}
+
+  .contato-final__acao{height:85px;padding:9px 1.1% 4px;background:#fff}
+  .contato-final__acao>p{font-size:10px;line-height:1.12;color:#4e642b;max-width:58%;font-family:Aileron,Arial,sans-serif}
+  .contato-final__whatsapp{right:1.5%;bottom:46px;gap:10px;font-size:11px;line-height:1.12}
+  .contato-final__whatsapp i{width:32px;height:20px}
+
+  .contato-final__rodape{position:relative;min-height:139px;display:block;padding:20px 3% 10px 17.5%;font-family:Aileron,Arial,sans-serif;font-size:13px;line-height:1.18;overflow:hidden;border-top:0}
+  .contato-final__identidade{min-width:0;margin:0 0 7px 0}
+  .contato-final__dados{min-width:0;margin:0;padding:5px 0 0;border-left:0;border-top:1px dotted rgba(73,103,99,.55)}
+  .contato-final__linha{display:none}
+  .contato-final__icone-mobile{display:block;position:absolute;z-index:1;left:-48px;bottom:-12px;width:112px;height:168px;object-fit:contain;object-position:center;pointer-events:none}
+  .contato-final__identidade,.contato-final__dados{position:relative;z-index:2}
+}
+
+
+/* V108 — correção exclusiva da última tela em celulares; fundo preservado. */
+@media(max-width:700px){
+  /* Mantém integralmente o plano de fundo da V106. */
+  .contato-final__imagem{height:306px}
+  .contato-final__bg{width:100%;height:100%;object-fit:cover;object-position:center center}
+  .contato-final__imagem::after{background:rgba(5,18,14,.08)}
+
+  /* Textos independentes, diretamente sobre a fotografia. */
+  .contato-final__texto{position:absolute;z-index:3;inset:0;color:inherit;pointer-events:none}
+  .contato-final__texto h2{
+    position:absolute!important;display:block!important;
+    left:43.5%!important;top:14px!important;width:53%!important;height:auto!important;
+    margin:0!important;padding:0!important;overflow:visible!important;clip:auto!important;white-space:normal!important;border:0!important;
+    font-family:"Playfair Display",Georgia,serif!important;font-size:20.5px!important;line-height:1.34!important;font-weight:700!important;
+    color:#e9e3cc!important;text-shadow:1px 1px 1px rgba(0,0,0,.45)!important;
+  }
+  .contato-final__texto p{
+    position:absolute!important;display:block!important;
+    left:64.5%!important;top:161px!important;width:31.5%!important;height:auto!important;
+    margin:0!important;padding:0!important;overflow:visible!important;clip:auto!important;white-space:normal!important;border:0!important;
+    font-family:Aileron,Arial,sans-serif!important;font-size:12px!important;line-height:1.28!important;font-weight:400!important;
+    color:#d9d9d9!important;text-shadow:1px 1px 1px rgba(0,0,0,.55)!important;
+  }
+
+  /* Faixa do CTA: texto da esquerda limitado a exatamente duas linhas. */
+  .contato-final__acao{height:85px;padding:9px 1.1% 4px;background:#fff}
+  .contato-final__acao>p{width:57%;max-width:none;margin:0;font-family:Aileron,Arial,sans-serif;font-size:8.6px;line-height:1.12;color:#4e642b;white-space:nowrap}
+  .contato-final__whatsapp{right:1.5%;bottom:46px;gap:10px;font-size:11px;line-height:1.12}
+  .contato-final__whatsapp i{width:32px;height:20px}
+
+  /* Rodapé: ícone avança para dentro e a linha fina nasce nele, como uma ponte. */
+  .contato-final__rodape{position:relative;min-height:139px;display:block;padding:20px 3% 10px 17.5%;font-family:Aileron,Arial,sans-serif;font-size:13px;line-height:1.18;overflow:hidden;border-top:0}
+  .contato-final__rodape::after{content:"";position:absolute;z-index:1;left:8.5%;right:3%;top:78px;border-top:1px dotted rgba(73,103,99,.55);pointer-events:none}
+  .contato-final__identidade{min-width:0;margin:0 0 7px 0}
+  .contato-final__dados{min-width:0;margin:0;padding:5px 0 0;border:0}
+  .contato-final__linha{display:none}
+  .contato-final__icone-mobile{display:block;position:absolute;z-index:2;left:-18px;bottom:-12px;width:112px;height:168px;object-fit:contain;object-position:center;pointer-events:none}
+  .contato-final__identidade,.contato-final__dados{position:relative;z-index:3}
+}
+
+
+/* V109 — ajuste fino exclusivo da tela final em celulares. */
+@media(max-width:700px){
+  /* Fundo e enquadramento permanecem exatamente como na V108. */
+  .contato-final__texto h2{
+    left:42.5%!important;
+    width:55.5%!important;
+    font-size:20.5px!important;
+    line-height:1.32!important;
+    letter-spacing:-.45px!important;
+    text-align:justify!important;
+    text-align-last:left!important;
+  }
+  .contato-final__texto p{
+    left:59.5%!important;
+    top:158px!important;
+    width:38.5%!important;
+    font-size:12px!important;
+    line-height:1.24!important;
+    letter-spacing:-.18px!important;
+  }
+
+  /* Os dois conteúdos do CTA começam na mesma altura; texto esquerdo maior e em duas linhas. */
+  .contato-final__acao>p{
+    width:58%!important;
+    font-size:9.5px!important;
+    line-height:1.14!important;
+    white-space:nowrap!important;
+  }
+  .contato-final__whatsapp{
+    top:9px!important;
+    bottom:auto!important;
+    right:1.5%!important;
+  }
+
+  /* Ícone contido exatamente na faixa vertical do bloco de dados. */
+  .contato-final__rodape{
+    padding-left:17.5%!important;
+  }
+  .contato-final__icone-mobile{
+    left:0!important;
+    top:20px!important;
+    bottom:auto!important;
+    width:61px!important;
+    height:105px!important;
+    object-fit:contain!important;
+  }
+  /* Ponte: parte da borda direita do ícone e segue até a margem direita. */
+  .contato-final__rodape::after{
+    left:61px!important;
+    right:3%!important;
+    top:78px!important;
+  }
+}
+
+
+/* V110 — abertura: frase explicativa + refinamento exclusivo da seta do ENTRAR. */
+.frase-abertura{
+  position:absolute;
+  z-index:3;
+  left:50%;
+  top:71.5%;
+  transform:translateX(-50%);
+  width:max-content;
+  max-width:80%;
+  margin:0;
+  color:rgba(255,255,255,.55);
+  font-family:"Sprout", "Arial Narrow", Arial, sans-serif;
+  font-size:15.7px;
+  line-height:1.2;
+  font-weight:400;
+  text-align:center;
+  opacity:0;
+  animation:fraseAberturaSurge 1.8s ease 5s forwards;
+  pointer-events:none;
+}
+@keyframes fraseAberturaSurge{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+/* Mantém círculo, posição e dimensões existentes; apenas redesenha a seta para ficar geometricamente centrada. */
+.entrar i{
+  position:relative;
+  font-size:0!important;
+}
+.entrar i::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:5px;
+  height:5px;
+  border-top:2px solid #46553b;
+  border-right:2px solid #46553b;
+  transform:translate(-62%,-50%) rotate(45deg);
+}
+
+@media(max-width:700px){
+  .frase-abertura{
+    top:70.5%;
+    max-width:88%;
+    width:88%;
+    font-size:12px;
+    line-height:1.25;
+  }
+}
