@@ -2578,3 +2578,17 @@ a:focus-visible,button:focus-visible{
     white-space:nowrap;
   }
 }
+
+
+/* V128 — ajuste fino de posicionamento para celulares em retrato.
+   Mantém figura, logo, fundo, tipografia e layouts de tablet/desktop intactos. */
+@media (max-width:480px) and (orientation:portrait){
+  .frase-abertura{
+    top: calc(70.5% + 35px) !important;
+  }
+
+  .enter-link{
+    bottom: calc(2.8% + 22px) !important;
+    right: calc(4% + 12px) !important;
+  }
+}
