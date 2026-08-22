@@ -2263,3 +2263,318 @@ a:focus-visible,button:focus-visible{
     line-height:1.25;
   }
 }
+
+
+/* TESTE — V111: substitui exclusivamente o vídeo da abertura pela arte estática fornecida. */
+.imagem-abertura-estatica{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:fill;
+  z-index:0;
+  display:block;
+}
+.logo-abertura,.frase-abertura,.entrar{z-index:3;}
+@media(max-width:1100px) and (orientation:portrait){
+  .imagem-abertura-estatica{object-fit:cover;object-position:center center;}
+}
+
+/* V112 — fundo oficial da abertura. No celular, usa a mesma arte oficial; apenas reenquadra. */
+@media(max-width:700px) and (orientation:portrait){
+  .imagem-abertura-estatica{
+    object-fit:cover;
+    object-position:right center;
+  }
+  .frase-abertura{
+    width:max-content;
+    max-width:none;
+    white-space:nowrap;
+    font-size:6.2px;
+    line-height:1;
+  }
+}
+
+/* V114 — figura independente sobre o fundo oficial, #e9e3cc a 40%, com fade progressivo. */
+.figura-abertura-fade{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:fill;
+  z-index:1;
+  display:block;
+  opacity:0;
+  animation:figuraAberturaFade 3.5s ease-in-out .8s forwards;
+  pointer-events:none;
+}
+@keyframes figuraAberturaFade{
+  from{opacity:0}
+  to{opacity:.6667}
+}
+@media(max-width:1100px) and (orientation:portrait){
+  .figura-abertura-fade{
+    object-fit:cover;
+    object-position:right center;
+  }
+}
+@media (prefers-reduced-motion: reduce){
+  .figura-abertura-fade{animation:none;opacity:.6667}
+}
+
+/* V115 — integração orgânica da figura à madeira.
+   Mantém posição/escala; altera apenas o tratamento visual e o fade. */
+.figura-abertura-fade{
+  mix-blend-mode:soft-light;
+  filter:brightness(.96) contrast(.92) saturate(.82);
+  opacity:0;
+  animation:figuraAberturaFadeIntegrado 3.8s cubic-bezier(.22,.61,.36,1) .65s forwards;
+  will-change:opacity,filter;
+}
+@keyframes figuraAberturaFadeIntegrado{
+  0%{opacity:0;filter:brightness(.90) contrast(.82) saturate(.78)}
+  38%{opacity:.28;filter:brightness(.93) contrast(.86) saturate(.80)}
+  72%{opacity:.58;filter:brightness(.95) contrast(.90) saturate(.81)}
+  100%{opacity:.78;filter:brightness(.96) contrast(.92) saturate(.82)}
+}
+@media (prefers-reduced-motion: reduce){
+  .figura-abertura-fade{
+    animation:none;
+    opacity:.78;
+    filter:brightness(.96) contrast(.92) saturate(.82);
+  }
+}
+
+
+/* V116 — ajuste solicitado: figura menor e cor original #e9e3cc a 40%. */
+.figura-abertura-fade{
+  mix-blend-mode:normal;
+  filter:none;
+  transform:scale(.88);
+  transform-origin:top right;
+  opacity:0;
+  animation:figuraAberturaFadeV116 3.8s cubic-bezier(.22,.61,.36,1) .65s forwards;
+}
+@keyframes figuraAberturaFadeV116{
+  from{opacity:0}
+  to{opacity:.40}
+}
+@media(max-width:700px) and (orientation:portrait){
+  .figura-abertura-fade{transform:scale(.92);transform-origin:top right;}
+}
+@media (prefers-reduced-motion: reduce){
+  .figura-abertura-fade{animation:none;opacity:.40;filter:none;}
+}
+
+/* V117 — figura da abertura: -15% adicional, levemente à esquerda e abaixo. */
+.figura-abertura-fade{
+  transform:translate(-2.2%, 3.0%) scale(.748);
+  transform-origin:top right;
+}
+@media(max-width:700px) and (orientation:portrait){
+  .figura-abertura-fade{
+    transform:translate(-2.2%, 3.0%) scale(.782);
+    transform-origin:top right;
+  }
+}
+
+/* V118 — responsividade exclusiva da ABERTURA.
+   Desktop (>1100px) permanece exatamente como aprovado na V117. */
+
+/* Tablets em retrato */
+@media (min-width:701px) and (max-width:1100px) and (orientation:portrait){
+  .figura-abertura-fade{
+    transform:translate(2.5%, 6%) scale(.636);
+    transform-origin:top right;
+  }
+  .frase-abertura{
+    top:72.5%;
+    width:86%;
+    max-width:86%;
+    white-space:normal;
+    font-size:12.5px;
+    line-height:1.2;
+    text-align:center;
+  }
+  .entrar{
+    right:4.5%;
+    bottom:5.5%;
+  }
+}
+
+/* Celulares em retrato */
+@media (max-width:480px) and (orientation:portrait){
+  .figura-abertura-fade{
+    transform:translate(5.5%, 7%) scale(.61);
+    transform-origin:top right;
+  }
+  .frase-abertura{
+    left:50%;
+    top:72.5%;
+    width:88%;
+    max-width:88%;
+    white-space:normal;
+    transform:translateX(-50%);
+    font-size:10.5px;
+    line-height:1.22;
+    text-align:center;
+  }
+  .entrar{
+    right:5%;
+    bottom:4.5%;
+  }
+  .entrar span{font-size:11px;}
+}
+
+/* V119 — abertura MOBILE: mantém a arte inteira e muda apenas o enquadramento/posição.
+   Desktop e tablet permanecem exatamente como na V118. */
+@media (max-width:480px) and (orientation:portrait){
+  .figura-abertura-fade{
+    transform:translate(-8%, 5%) scale(.90);
+    transform-origin:top right;
+  }
+  .frase-abertura{
+    left:3.5%;
+    top:auto;
+    bottom:7.2%;
+    width:78%;
+    max-width:78%;
+    white-space:normal;
+    transform:none;
+    font-size:9.5px;
+    line-height:1.18;
+    text-align:left;
+  }
+  .entrar{
+    right:5%;
+    bottom:2.8%;
+  }
+}
+
+/* V120 — correção MOBILE: escala e reposicionamento reais da figura, sem crop por object-fit.
+   Desktop e tablet permanecem inalterados. */
+@media (max-width:480px) and (orientation:portrait){
+  .figura-abertura-fade{
+    content:url("assets/figura-abertura-mobile.png");
+    inset:auto;
+    top:11.5%;
+    right:-4.5%;
+    width:91%;
+    height:auto;
+    object-fit:contain;
+    object-position:center;
+    transform:none;
+    transform-origin:center;
+  }
+}
+
+/* V121 — ajuste cirúrgico da abertura em CELULARES.
+   Centraliza a composição da figura no viewport, com leve viés à esquerda,
+   baixa a figura e posiciona a frase imediatamente abaixo, centralizada.
+   Desktop e tablet não são alterados. */
+@media (max-width:480px) and (orientation:portrait){
+  .figura-abertura-fade{
+    content:url("assets/figura-abertura-mobile.png");
+    inset:auto;
+    top:16.5%;
+    left:47%;
+    right:auto;
+    width:86%;
+    height:auto;
+    object-fit:contain;
+    object-position:center;
+    transform:translateX(-50%);
+    transform-origin:center top;
+  }
+  .frase-abertura{
+    left:50%;
+    top:64.5%;
+    bottom:auto;
+    width:92%;
+    max-width:92%;
+    white-space:nowrap;
+    transform:translateX(-50%);
+    font-size:7.4px;
+    line-height:1;
+    text-align:center;
+  }
+}
+
+/* V122 — MOBILE: desce a composição e amplia a frase em 20%.
+   Mantém escala horizontal e demais elementos intactos. */
+@media (max-width:480px) and (orientation:portrait){
+  .figura-abertura-fade{
+    top:23.5%;
+    left:47%;
+    width:86%;
+    transform:translateX(-50%);
+  }
+  .frase-abertura{
+    left:50%;
+    top:70.5%;
+    width:94%;
+    max-width:94%;
+    font-size:8.88px;
+    line-height:1.08;
+    text-align:center;
+    white-space:nowrap;
+    transform:translateX(-50%);
+  }
+}
+
+/* V123 — MOBILE: aumenta somente a frase da abertura em mais 30%. */
+@media (max-width:480px) and (orientation:portrait){
+  .frase-abertura{
+    font-size:11.544px;
+  }
+}
+
+/* V124 — MOBILE: aumenta somente a frase da abertura em mais 25% sobre a V123. */
+@media (max-width:480px) and (orientation:portrait){
+  .frase-abertura{
+    font-size:14.43px;
+  }
+}
+
+/* V125 — MOBILE: frase em duas linhas, bloco centralizado e linhas justificadas.
+   Mantém figura, fundo, logo, CTA, escala e posição vertical aprovados na V124. */
+@media (max-width:480px) and (orientation:portrait){
+  .frase-abertura{
+    left:50%;
+    top:70.5%;
+    width:88%;
+    max-width:88%;
+    transform:translateX(-50%);
+    font-size:14.43px;
+    line-height:1.28;
+    white-space:normal;
+    text-align:justify;
+    text-align-last:center;
+    text-justify:inter-word;
+  }
+}
+
+
+/* V127 — MOBILE: duas linhas controladas, sem esticar palavras.
+   O bloco é compacto e fica centralizado no viewport; o texto dentro dele fica alinhado à esquerda. */
+@media (max-width:480px) and (orientation:portrait){
+  .frase-abertura{
+    left:50%;
+    top:70.5%;
+    width:max-content;
+    max-width:90%;
+    transform:translateX(-50%);
+    font-size:14.43px;
+    line-height:1.28;
+    white-space:normal;
+    text-align:left;
+    text-align-last:auto;
+    text-justify:auto;
+  }
+  .frase-abertura span{
+    display:block;
+    width:max-content;
+    max-width:100%;
+    white-space:nowrap;
+  }
+}
